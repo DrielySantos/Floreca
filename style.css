@@ -1,0 +1,222 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    height: 100vh;
+}
+
+/*************** CARROSSEL ****************/
+ .slider{
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+
+} 
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+    height: 120%;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+/****************** FIM CARROSSEL *********************/
+
+/****************** SEGUNDO CONTEÚDO ******************/
+
+.details{
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.details h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: 0.6s all;
+}
+
+.details p{
+    font-size: 14px;
+    transition: 0.6s all;
+}
+
+.details a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: rgb(23, 61, 110);
+    padding: 6px 12px;
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid #2c3e50;
+    border-radius: 50px;
+    transition: 0.6s all;
+}
+
+.details::before{
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: #bd654ada;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.6s all;
+}
+
+.details:hover::before{
+    width: 100%;
+}
+
+.details:hover h2,.details:hover p{
+    color: #fff;
+}
+
+.details:hover a{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+/* IMAGENS */
+.details img{
+    width: 100%;
+    height: 50%;
+}
+
+/*****************************************************/
+
+/********************* RODAPÉ **********************/
+
+.footer{
+    background: rgb(239, 235, 246);
+    border-top: 1px dotted rgb(3, 3, 3);
+}
+
+.footer> h4{
+    color: rgb(14, 13, 13);
+    margin-top: 25px;
+    
+}
+
+/* .footer p{
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(169, 54, 159);
+} */
+
+
+.footer ul a{
+    color: rgb(170, 140, 110);
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.footer ul a:hover{
+    padding-left: 30px;
+    border-left: 4px solid rgba(34, 91, 156, 0.89);
+    color: rgb(8, 39, 105);
+    transition: .4s;
+    
+}
+
+.footer li a{
+    margin-top: 10px;
+    list-style-type: none;
+}
