@@ -4,35 +4,32 @@
         <div class="row text-center">
           <div class="col-md-4 footer">
             <h4> Mapa do site</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Tratamentos</a></li>
-              <li><a href="#">Nossa clínica</a></li>
-              <li><a href="#">Agendamento</a></li>
-            </ul>
+              <p><a href="#">Home</a></p>
+              <p><a href="#">Tratamentos</a></p>
+              <p><a href="#">Nossa clínica</a></p>
+              <p><a href="#">Agendamento</a></p>
           </div>
 
           <div class="col-md-4 footer">
             <h4>Fale conosco</h4>
-            <ul>
-              <li><a class="btn-outline" href="https://web.whatsapp.com/" target="_blank">Atendimento ao Cliente</a></li>
-              <li><a href="https://web.whatsapp.com/" target="_blank">Dúvidas</a></li>
-              <li><a href="https://web.whatsapp.com/" target="_blank">Reclamações</a></li>
-              <li><a href="https://web.whatsapp.com/" target="_blank">Cancelamento</a></li>
-              <li><a href="https://web.whatsapp.com/" target="_blank">Ouvidoria</a></li>
-              <li><a href="mailto:emaildaclinica@gmail.com" target="_blank">E-mail:emaildaclinica@gmail.com</a></li>
-            </ul>
+              <p><a class="btn-outline" href="https://web.whatsapp.com/" target="_blank">Atendimento ao Cliente</a></p>
+              <p><a href="https://web.whatsapp.com/" target="_blank">Dúvidas</a></p>
+              <p><a href="https://web.whatsapp.com/" target="_blank">Reclamações</a></p>
+              <p><a href="https://web.whatsapp.com/" target="_blank">Cancelamento</a></p>
+              <p><a href="https://web.whatsapp.com/" target="_blank">Ouvidoria</a></p>
+              <p><a href="mailto:emaildaclinica@gmail.com" target="_blank">E-mail:emaildaclinica@gmail.com</a></p>
           </div>
           
-          <div class="col-md-4 footer">
+          <div class="col-md-4 footer s-m">
             <h4>Acompanhe nas redes sociais</h4>
-                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+              <ul>
+                <li><a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a></li>
+              </ul>
           </div>
-      
-          
+
         </div>
 
     <!-- JavaScript (Opcional) -->

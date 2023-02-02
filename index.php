@@ -4,48 +4,35 @@
 
 ?>
 
-<div class="slider">
-        <div class="slides"> 
-            <!-- Radio Buttons -->
-            <input type="radio" nome="radio-btn" id="radio1">
-            <input type="radio" nome="radio-btn" id="radio2">
-            <input type="radio" nome="radio-btn" id="radio3">
-            <input type="radio" nome="radio-btn" id="radio4"> 
-            <!-- Fim Radio Buttons -->
-
-            <!-- Slide imagens -->
-            <div class="slide first">
-                <img src="/novo/imagens/carrossel-1.jpg" alt="imagem carrossel 1">
-            </div>
-            <div class="slide">
-                <img src="/novo/imagens/carrossel-2.jpg" alt="imagem carrossel 2">
-            </div>
-            <div class="slide">
-                <img src="/novo/imagens/carrossel-3.jpg" alt="imagem carrossel 3">
-            </div>
-            <div class="slide">
-                <img src="/novo/imagens/carrossel-4.jpg" alt="imagem carrossel 4">
-            </div>
-             <!-- Slide imagens -->
-
-             <!-- Navigation auto -->
-             <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-             </div>
-             
-        </div>
-
-        <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-        </div>
-
-    </div> 
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./imagens/carrossel-1.jpg" alt="Primeiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./imagens/carrossel-2.jpg" alt="Segundo Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./imagens/carrossel-3.jpg" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./imagens/carrossel-4.jpg" alt="Terceiro Slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
 
     <!-- CONTEÚDO -->
 
@@ -104,6 +91,63 @@
 
         </div>
       </div>
+
+<!-- **************************** MENSAGEM DE AGENDAMENTO *******************************-->
+
+    
+
+    <form>
+
+        <div class="container-fluid agenda-cliente">
+        <div class="row">
+            <div class="col-md-12 text-center">
+            <h1>AGENDE SUA VISITA</h1>
+            </div>
+        </div>
+        </div>
+
+        <div class="container agenda-cliente ">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="nome">Nome e sobrenome</label>
+                <input type="text" class="form-control" name="nome" placeholder="Seu nome e sobrenome">    
+              </div>
+            </div> 
+          </div>
+          
+          <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="telefone">WhatsApp</label>
+                    <input type="text" class="form-control" name="telefone" onkeypress="$(this).mask('(00)00000-0000')">
+                </div>
+            </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Endereço de e-mail</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="nome@email.com">                   
+              </div>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Assunto</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary">AGENDAR VISITA</button>
+
+
+    </form>
 
 <?php
     require_once 'footer.php';
