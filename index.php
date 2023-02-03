@@ -94,19 +94,17 @@
 
 <!-- **************************** MENSAGEM DE AGENDAMENTO *******************************-->
 
-    
-
     <form>
 
-        <div class="container-fluid agenda-cliente">
+        <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-            <h1>AGENDE SUA VISITA</h1>
+              <h1>AGENDE SUA VISITA</h1>
             </div>
         </div>
         </div>
 
-        <div class="container agenda-cliente ">
+        <div class="container client__message ">
           <div class="row">
             <div class="col-md-5">
               <div class="form-group">
@@ -144,7 +142,9 @@
           </div>
         </div>
 
-        <button type="button" class="btn btn-primary">AGENDAR VISITA</button>
+        <div class="col-md-12 text-center">
+          <button type="button" class="button__message">AGENDAR VISITA</button>
+        </div>
 
 
     </form>

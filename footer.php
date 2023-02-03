@@ -16,17 +16,16 @@
               <p><a href="https://web.whatsapp.com/" target="_blank">Dúvidas</a></p>
               <p><a href="https://web.whatsapp.com/" target="_blank">Reclamações</a></p>
               <p><a href="https://web.whatsapp.com/" target="_blank">Cancelamento</a></p>
-              <p><a href="https://web.whatsapp.com/" target="_blank">Ouvidoria</a></p>
-              <p><a href="mailto:emaildaclinica@gmail.com" target="_blank">E-mail:emaildaclinica@gmail.com</a></p>
+              <p><a href="mailto:floreca@gmail.com" target="_blank">E-mail:floreca@gmail.com</a></p>
           </div>
           
-          <div class="col-md-4 footer s-m">
+          <div class="col-md-4 footer social__networks">
             <h4>Acompanhe nas redes sociais</h4>
               <ul>
-                <li><a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a></li>
-                <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a></li>
+                <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a></li>
               </ul>
           </div>
 

@@ -1,16 +1,19 @@
 
+/* ***************** CORPO DO SITE ***************** */
 body{
     margin: 0;
     padding: 0;
     max-width: 100%;
     height: 100vh;
+    overflow-x: hidden;
+    background: #dedede;
 }
 
 /****************** SEGUNDO CONTEÚDO ******************/
 
 .details{
     margin: 20px 0;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 30px 20px;
     position: relative;
     z-index: 1;
@@ -31,7 +34,7 @@ body{
     text-decoration: none;
     text-transform: capitalize;
     color: #fff;
-    background-color: rgb(23, 61, 110);
+    background-color: rgb(38, 71, 114);
     padding: 6px 12px;
     display: inline-block;
     font-size: 14px;
@@ -44,7 +47,7 @@ body{
     content: "";
     width: 5px;
     height: 100%;
-    background-color: #bd654ada;
+    background-color: #c07d69da;
     position: absolute;
     left: 0;
     top: 0;
@@ -76,36 +79,71 @@ body{
 /* *********************AGENDA ***************** */
 
 form {
-    background: #3e668f;
+    background: #a6aaaf;
 }
 
 form h1 {
     font-family: 'Ubuntu', sans-serif;
-    margin-top: 20PX;
+    margin-top: 30PX;
 }
 
-.btn-primary {
-   color: rgb(245, 244, 244);
-   background: rgb(15, 15, 15);
-
-   margin: 0 33rem;
+.client__message {
+    margin-right: -150px;
 }
 
+.button__message {
+    align-items: center;
+    appearance: none;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* position: relative; */
+    /* text-align: left; */
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
 
+.button__message:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
 
+.button__message:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+     transform: translateY(-2px);    
+}
 
-
-
-
-
-
-
+.button__message:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+/***********************  **************************/
 
 /********************* RODAPÉ **********************/
 
 .footer{
-    background: rgb(239, 235, 246);
-    border-top: 1px dotted rgb(3, 3, 3);
+    background:#b89e8d;
+    border-top: 1px solid rgb(3, 3, 3);
 }
 
 .footer> h4{
@@ -118,60 +156,79 @@ form h1 {
     margin-top: 20px;
     text-decoration: none;
     font-size: 20px;
-    color: rgb(170, 140, 110);
+    color: rgb(32, 25, 18);
 } 
 
 .footer p a:hover {
     padding-left: 30px;
-    border-left: 4px solid rgba(34, 91, 156, 0.89);
-    color: rgb(8, 39, 105);
+    border-left: 4px solid rgba(136, 64, 152, 0.89);
+    color: rgb(85, 8, 108);
     transition: .4s;
 }
 
-.s-m a {
-    display: inline-flex;
-    width: 50px;
-    height: 50px;
-    background: rgb(119, 134, 138);
-    color: white;
-    margin: 0 6px;
-    border-radius: 50px;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    font-size: 25px;
+.social__networks ul {
+    display:inline-flex;
 }
 
-.s-m a:hover {
-    background: #2c3e50;
+.social__networks ul li {
+    margin: 15px;
+    list-style: none;
 }
 
-.s-m a i {
-    transition: 0.4s all;
+.social__networks ul li a {
+    position: relative;
+    width:50px;
+    height:50px;
+    display:block;
+    text-align:center;
+    margin:0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration:none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
 }
 
-.s-m a:hover > i {
-    transform: scale(1.5) rotate(15deg);
+.social__networks ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration:none;
 }
 
-
-/* .footer ul a{
-    color: rgb(170, 140, 110);
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 20px;
+.social__networks ul li a .fab {
+    width: 100%;
+    height:100%;
+    display:block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(50px - 12px);
+    font-size:24px;
+    color: #262626;
+    transition: .5s;
+}
+  
+.social__networks ul li:nth-child(1) a:hover .fab {
+    color: #3b5998;
 }
 
-.footer ul a:hover{
-    padding-left: 30px;
-    border-left: 4px solid rgba(34, 91, 156, 0.89);
-    color: rgb(8, 39, 105);
-    transition: .4s;
-    
+.social__networks ul li:nth-child(2) a:hover .fab {
+    color: #e4405f;
 }
 
-.footer li a{
-    margin-top: 10px;
-    list-style-type: none;
-} */
+.social__networks ul li:nth-child(4) a:hover .fab {
+    color: #25D366;
+}
+
+/******************* A FAZER SÁBADO ****************  */
+
+/* ***** FRONT-END ***** */
+
+/* o site saiu do responsivel...provavelmente no css */
+/* fazer o teste da div vazia para ver se volta a funcionar */
+/* alinhar social__networks */
+/* elemento hover nos dropdown do menu */
+/* mudar font-family do site  */
+/* criar conteúdo principal */
+/* criar páginas do navbardropdown */
+/* paleta de cores para o site */
