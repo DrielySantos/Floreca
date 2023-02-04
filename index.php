@@ -97,11 +97,11 @@
     <form>
 
         <div class="container-fluid">
-        <div class="row">
+          <div class="row">
             <div class="col-md-12 text-center">
               <h1>AGENDE SUA VISITA</h1>
             </div>
-        </div>
+          </div>
         </div>
 
         <div class="container client__message ">

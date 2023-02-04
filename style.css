@@ -3,11 +3,21 @@
 body{
     margin: 0;
     padding: 0;
-    max-width: 100%;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     overflow-x: hidden;
     background: #dedede;
 }
+
+/* .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 280px;
+    max-width: 1024px;
+    margin: auto;
+
+} */
 
 /****************** SEGUNDO CONTEÚDO ******************/
 
@@ -80,6 +90,7 @@ body{
 
 form {
     background: #a6aaaf;
+   
 }
 
 form h1 {
@@ -87,9 +98,9 @@ form h1 {
     margin-top: 30PX;
 }
 
-.client__message {
+/* .client__message {
     margin-right: -150px;
-}
+} */
 
 .button__message {
     align-items: center;
@@ -112,8 +123,8 @@ form h1 {
     overflow: hidden;
     padding-left: 16px;
     padding-right: 16px;
-    /* position: relative; */
-    /* text-align: left; */
+    position: relative; 
+    text-align: left;
     text-decoration: none;
     transition: box-shadow .15s,transform .15s;
     user-select: none;
@@ -136,7 +147,8 @@ form h1 {
 .button__message:active {
     box-shadow: #3c4fe0 0 3px 7px inset;
     transform: translateY(2px);
-  }
+} 
+
 /***********************  **************************/
 
 /********************* RODAPÉ **********************/
@@ -167,18 +179,21 @@ form h1 {
 }
 
 .social__networks ul {
+    margin-right: 50px;
+    margin-top: 10px;
     display:inline-flex;
+
 }
 
 .social__networks ul li {
-    margin: 15px;
+    margin: 1px;
     list-style: none;
 }
 
 .social__networks ul li a {
     position: relative;
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
     display:block;
     text-align:center;
     margin:0 10px;
@@ -198,12 +213,12 @@ form h1 {
 
 .social__networks ul li a .fab {
     width: 100%;
-    height:100%;
+    height: 100%;
     display:block;
     background: linear-gradient(0deg, #fff, #ddd);
     border-radius: 50%;
     line-height: calc(50px - 12px);
-    font-size:24px;
+    font-size:20px;
     color: #262626;
     transition: .5s;
 }
@@ -220,13 +235,14 @@ form h1 {
     color: #25D366;
 }
 
+
+
 /******************* A FAZER SÁBADO ****************  */
 
 /* ***** FRONT-END ***** */
 
-/* o site saiu do responsivel...provavelmente no css */
-/* fazer o teste da div vazia para ver se volta a funcionar */
-/* alinhar social__networks */
+/* centralizar formulário */
+/* alinhar social__networks para telas menores*/
 /* elemento hover nos dropdown do menu */
 /* mudar font-family do site  */
 /* criar conteúdo principal */
