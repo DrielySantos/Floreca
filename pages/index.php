@@ -99,23 +99,23 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h1 class="appointment__form__title">AGENDE SUA VISITA</h1>
+              <h1 class="appointment__form__title">Solicite sua Visita</h1>
             </div>
           </div>
         </div>
 
             <div class="container  ">
               <div class="row">
-                <div class="col-md-7 ">
+                <div class="col-md-5">
                   <div class="form-group">
-                    <label for="nome">Nome e sobrenome</label>
-                    <input type="text" class="form-control" name="nome" placeholder="Seu nome e sobrenome">    
+                    <label for="name">Nome e sobrenome</label>
+                    <input type="text" class="form-control" name="name" id="name"  placeholder="Seu nome e sobrenome"  required minlength="3" value="{$name}">    
                   </div>
                 </div> 
               </div>
               
               <div class="row">
-                <div class="col-md-7 ">
+                <div class="col-md-5">
                     <div class="form-group">
                         <label for="telefone">WhatsApp</label>
                         <input type="number" class="form-control" name="telefone" onkeypress="$(this).mask('(00)00000-0000')">
@@ -124,26 +124,35 @@
               </div>
                 
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-5">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Endereço de e-mail</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="nome@email.com">                   
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="nome@email.com" required value="{$email}">                   
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5 ">
+                  <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" name="subject" id="subject" placeholder="Assunto do contato" required minlength="5" value="{$subject}">
                   </div>
                 </div>
               </div>
           
               <div class="row">
-                <div class="col-md-7 ">
+                <div class="col-md-5 ">
                   <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Assunto</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="message">Mensagem</label>
+                    <textarea class="form-control"  name="message" id="message" required minlength="5" rows="3"></textarea>
                   </div>
                 </div>
               </div>
            
 
               <div class="col-md-12 text-center">
-                <button type="button" class="button__message">AGENDAR VISITA</button>
+                <input type="submit" class="button__message" name="btncad" value="Solicitar Visita">
               </div>
           </div>
     </form>

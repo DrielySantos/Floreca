@@ -18,7 +18,6 @@ CREATE table `cliente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `cliente` (
-    `cadastro`,
     `nome`,
     `telefone`,
     `cpf`,
@@ -30,7 +29,6 @@ INSERT INTO `cliente` (
     `senha`,
     `status`
 ) VALUE (
-    1,
     'William Costa',
     '(21)97070-7070',
     '120157142-10',
@@ -174,4 +172,13 @@ INSERT INTO `esteticista` (
 ) VALUES
 (1, 'segunda e sexta dia todo', '123'),
 (2, 'terca,quarta e quinta dia todo', '456');
+
+CREATE TABLE `contacts` (
+  `name` VARCHAR(255) NOT NULL,
+  `telefone` varchar(15) NOT NULL,
+  `subject` varchar (255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `message` TEXT NOT NULL,
+  `status` ENUM('sended', 'readed', 'responded', 'deleted') DEFAULT 'sended'
+);
 

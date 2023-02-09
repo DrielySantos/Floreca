@@ -12,7 +12,7 @@
 
         <div class="row">
             <div class="col-md-6">
-                <img src="/pages/imagens/radiofrequencia-1.jpg" alt="demonstração de radiofrequencia">
+                <img src="/pages/imagens/radiofrequencia-1.jpg" class="rounded float-left" alt="demonstração de radiofrequencia">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, iusto? Consequatur excepturi tempore, assumenda sequi distinctio, rerum porro maxime laborum hic dolor officia labore esse eos ipsum debitis dolore deserunt.
                 </p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima nemo voluptate autem itaque tempore ipsa tempora, quos, quidem ipsam saepe, repellendus quae repellat illo nesciunt. Qui exercitationem quam ducimus praesentium.</p>
             </div>
@@ -20,18 +20,21 @@
         
         <div class="row">
             <div class="col-md-6">
-                <img src="/pages/imagens/radiofrequencia-2.jpg" alt="demonstração de radiofrequencia antes e depois">
+                <img src="/pages/imagens/radiofrequencia-2.jpg" class="rounded float-right" alt="demonstração de radiofrequencia antes e depois">
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6">
-                <img src="/pages/imagens/radiofrequencia-3.jpg" alt="demonstração de radiofrequencia antes e depois">
+                <img src="/pages/imagens/radiofrequencia-3.jpg" class="rounded float-left" alt="demonstração de radiofrequencia antes e depois">
             </div>
         </div>
 
     </div>
 
+
+    <img src="..."  alt="...">
+    <img src="..." class="rounded float-right" alt="...">
 
 
 <?php
