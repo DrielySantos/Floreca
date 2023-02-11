@@ -117,3 +117,7 @@ require_once 'head.php';
 </div>
 
 </form>
+
+<?php
+  require_once 'footer-admin.php';
+?>

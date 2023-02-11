@@ -104,57 +104,52 @@
           </div>
         </div>
 
-            <div class="container  ">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="form-group">
-                    <label for="name">Nome e sobrenome</label>
-                    <input type="text" class="form-control" name="name" id="name"  placeholder="Seu nome e sobrenome"  required minlength="3" value="{$name}">    
-                  </div>
-                </div> 
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="name">Nome e sobrenome</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Seu nome e sobrenome">    
               </div>
-              
-              <div class="row">
-                <div class="col-md-5">
-                    <div class="form-group">
-                        <label for="telefone">WhatsApp</label>
-                        <input type="number" class="form-control" name="telefone" onkeypress="$(this).mask('(00)00000-0000')">
-                    </div>
-                </div>
-              </div>
-                
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Endereço de e-mail</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="nome@email.com" required value="{$email}">                   
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-5 ">
-                  <div class="form-group">
-                    <label for="subject">Assunto</label>
-                    <input type="text" name="subject" id="subject" placeholder="Assunto do contato" required minlength="5" value="{$subject}">
-                  </div>
-                </div>
-              </div>
-          
-              <div class="row">
-                <div class="col-md-5 ">
-                  <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea class="form-control"  name="message" id="message" required minlength="5" rows="3"></textarea>
-                  </div>
-                </div>
-              </div>
-           
-
-              <div class="col-md-12 text-center">
-                <input type="submit" class="button__message" name="btncad" value="Solicitar Visita">
-              </div>
+            </div> 
           </div>
+              
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" class="form-control" name="telefone" onkeypress="$(this).mask('(00)00000-0000')">
+              </div>
+            </div>
+          </div>
+                
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Endereço de e-mail</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                  <label for="exampleFormControlSelect2">Selecione sua consulta</label>
+                  <select multiple class="form-control" id="exampleFormControlSelect2">
+                    <option>Limpeza de pele</option>
+                    <option>Radiofrequência</option>
+                    <option>Massagem</option>
+                    <option>Alguma coisa aqui</option>
+                    <option>Mais algum serviço aqui</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 text-center">
+            <input type="submit" class="button__message" name="btncad" value="Solicitar Visita">
+          </div>
+        </div>
     </form>
 
 <?php
