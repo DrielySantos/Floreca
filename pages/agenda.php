@@ -30,9 +30,11 @@
                 <select multiple class="form-control" id="exampleFormControlSelect2">
                     <option>Limpeza de pele</option>
                     <option>Radiofrequência</option>
-                    <option>Massagem</option>
-                    <option>Alguma coisa aqui</option>
-                    <option>Mais algum serviço aqui</option>
+                    <option>Preenchimento Facial</option>
+                    <option>Toxina Botulínica</option>
+                    <option>Ultrassom Cavitacional</option>
+                    <option>Intradermoterapia</option>
+                    <option>Laser Galaxy Fiber</option>
                 </select>
             </div>
         </div>

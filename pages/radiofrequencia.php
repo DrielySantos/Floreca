@@ -22,9 +22,6 @@
             <div class="col-md-6">
                 <img src="/pages/imagens/radiofrequencia-2.jpg" class="second__photo" alt="demonstração de radiofrequencia antes e depois">
             </div>
-            <!-- <div class="col-md-6 col-sm">
-                <p class="radio__text">Muitas pessoas procuram o Jump para fortalecer as pernas e os glúteos, mas, mais do que essas regiões, ele trabalha muito bem a região do abdômen, e muitos dos exercícios são localizados para cuidar também dos músculos das costas e dos braços.</p>
-            </div> -->
         </div>
 
         <div class="row">

@@ -1,6 +1,6 @@
 
 
-<div class="container-fluid ">
+<div class="container-fluid">
         <div class="row text-center">
           <div class="col-md-4 footer">
             <h4> Mapa do site</h4>
