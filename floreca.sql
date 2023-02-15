@@ -61,17 +61,19 @@ INSERT INTO `servico` (
 (2, '2022-12-09', 'de 08:00 às 9:00h', '', '', 1, 2),
 (3, '2022-12-06', 'de 07:00 às 08:00h', '', '', 2, 2);
 
--- CREATE TABLE `consultacliente` (
---   `idconsultacliente` int(11) NOT NULL,
---   `cadastro` int(11) NOT NULL, 
---   `idconsulta` int(11) NOT NULL
--- ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `procedimento` (
+  `idprocedimento` int(11) NOT NULL,
+  `nomeprocedimento` varchar(60) NOT NULL,
+  `descricao` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
--- INSERT INTO `consultacliente` (`idconsultacliente`, `cadastro`, `idconsulta`) VALUES
--- (1, 1, 1),
--- (2, 1, 2),
--- (3, 2, 3);
+INSERT INTO `procedimento`(
+  `idprocedimento`, 
+  `nomeprocedimento`, 
+  `descricao`
+) VALUES
+(1, 'Preenchimento Facial', 'É realizado com a aplicação do ácido hialurônico na pele.'),
+(2, 'Radiofrequência', 'Tratamento eficaz contra flacidez e estimula o colágeno da pele.');
 
 CREATE TABLE `endereco` (
   `cep` char(9) NOT NULL,
@@ -93,6 +95,7 @@ INSERT INTO `endereco` (
 ('26551-090', 'Travessa Elpidio', 'Cruzeiro do Sul', 'Mesquita', 'RJ');
 
 CREATE TABLE `funcionario` (
+  `idfuncionario` char(14) NOT NULL,
   `cpffuncionario` char(14) NOT NULL,
   `nome` varchar(60) NOT NULL,
   `telefone` varchar(15) NOT NULL,
@@ -104,7 +107,8 @@ CREATE TABLE `funcionario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `funcionario` (
-  `cpffuncionario`, 
+  `idfuncionario`, 
+  `cpffuncionario`,
   `nome`, 
   `telefone`, 
   `rg`,
@@ -113,15 +117,38 @@ INSERT INTO `funcionario` (
   `foto`, 
   `email`
 ) VALUES
-('123', 'Mário Silva', '(21)9999-8888', '0001', '23085-610', 40,'vazio', ''),
-('456', 'Gabriel Silva', '(21)9999-7777', '0002', '26551-090', 100,'vazio',''),
-('789', 'Mariana Souza', '(21)9999-5555', '1234', '23085-610', 1820,'vazio','');
+('','123', 'Mário Silva', '(21)9999-8888', '0001', '23085-610', 40,'vazio', ''),
+('','456', 'Gabriel Silva', '(21)9999-7777', '0002', '26551-090', 100,'vazio',''),
+('','789', 'Mariana Souza', '(21)9999-5555', '1234', '23085-610', 1820,'vazio','');
+
+CREATE TABLE `itemservico` (
+  `iditem` int(11) NOT NULL,
+  `idservico` int(11) NOT NULL,
+  `idprodecimento` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `horario` varchar(30) NOT NULL,
+  `valor` varchar(30) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `itemservico` (
+  `iditem`,
+  `idservico`,
+  `idprodecimento`,
+  `data`,
+  `horario`,
+  `valor`
+) VALUES
+(1,2,3,'2023/03/20','de 15:00 às 15:30h','1000'),
+(2,3,1,'2023/04/25','de 15:00 às 15:30h','500');
+
 
 CREATE TABLE `contacts` (
-  `name` VARCHAR(255) NOT NULL,
+  `nome` VARCHAR(255) NOT NULL,
   `telefone` varchar(15) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `message` TEXT NOT NULL,
   `status` ENUM('sended', 'readed', 'responded', 'deleted') DEFAULT 'sended'
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+
 
