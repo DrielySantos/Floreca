@@ -1,5 +1,7 @@
 <!-- JavaScript (Opcional) -->
 <script src="script.js"></script>
+<script src="./scripts/cep.js"></script>
+
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 

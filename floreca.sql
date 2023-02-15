@@ -41,7 +41,7 @@ CREATE TABLE `servico` (
   `idservico` int(11) NOT NULL,
   `data` date NOT NULL,
   `horario` varchar(30) NOT NULL,
-  `valor` varchar(30) NOT NULL,
+  `valor` double NOT NULL,
   `idcliente` varchar(30) NOT NULL,
   `idfuncionario` int(11) NOT NULL,
   `idprocedimento` int(11) NOT NULL
@@ -127,7 +127,7 @@ CREATE TABLE `itemservico` (
   `idprodecimento` int(11) NOT NULL,
   `data` date NOT NULL,
   `horario` varchar(30) NOT NULL,
-  `valor` varchar(30) NOT NULL
+  `valor` double NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `itemservico` (

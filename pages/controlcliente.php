@@ -1,5 +1,5 @@
 <?php
-include_once 'conexao.php';
+    include_once './conexao.php';
 
     if(isset($_SESSION['msg'])){
         echo $_SESSION['msg'];
@@ -38,10 +38,9 @@ include_once 'conexao.php';
         if(!$vazio) {
 
         // $senha = password_hash($dadoscad['senha'], PASSWORD_DEFAULT);
-          
 
-       $sql ="insert into aluno(nome,datanascimento,telefone,cpf,rg,cep,numerocasa,email)
-       values(:nome,:datanascimento,:telefone,:cpf,:rg,:cep,:numerocasa,:email)";
+       $sql ="INSERT into cliente(nome,datanascimento,telefone,cpf,rg,cep,numerocasa,email)
+              values(:nome,:datanascimento,:telefone,:cpf,:rg,:cep,:numerocasa,:email)";
 
       $salvar= $conn->prepare($sql);
       $salvar->bindParam(':nome', $dadoscad['nome'], PDO::PARAM_STR);
@@ -88,10 +87,10 @@ include_once 'conexao.php';
             
         }
 
-        $sql ="UPDATE aluno 
+        $sql ="UPDATE cliente
                set nome=:nome,datanascimento=:datanascimento,telefone=:telefone,cpf=:cpf,
                    rg=:rg,cep=:cep,numerocasa=:numerocasa,email=:email 
-               WHERE matricula=:matricula";
+               WHERE idcliente=:idcliente";
 
         $salvar= $conn->prepare($sql);
         $salvar->bindParam(':nome', $dadoscad['nome'], PDO::PARAM_STR);
@@ -102,13 +101,13 @@ include_once 'conexao.php';
         $salvar->bindParam(':cep', $dadoscad['cep'], PDO::PARAM_STR);
         $salvar->bindParam(':numerocasa', $dadoscad['numero'], PDO::PARAM_INT);
         $salvar->bindParam(':email', $dadoscad['email'], PDO::PARAM_STR);
-        $salvar->bindParam(':matricula',$dadoscad['matricula'], PDO::PARAM_INT);
+        $salvar->bindParam(':idcliente',$dadoscad['idcliente'], PDO::PARAM_INT);
         $salvar->execute(); 
 
         if ($salvar->rowCount()) {
 
         echo "<script>
-        alert('Seus dados foram atualizados!');
+        alert('Os dados foram atualizados!');
         parent.location = 'formulario.php';
         </script>";
         
@@ -116,7 +115,7 @@ include_once 'conexao.php';
      } else {
     
         echo "<script>
-       alert('Seus dados não foram cadastrado!');
+       alert('Os dados não foram atualizados!');
        parent.location = 'formulario.php';
        </script>";
         

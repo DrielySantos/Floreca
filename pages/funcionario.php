@@ -1,5 +1,5 @@
 <?php
-require_once 'head.php';
+require_once './head.php';
 
 ?>
   
@@ -119,5 +119,5 @@ require_once 'head.php';
 </form>
 
 <?php
-  require_once 'footer-admin.php';
+  require_once './footer-admin.php';
 ?>

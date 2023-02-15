@@ -1,5 +1,5 @@
 <?php
-require_once 'head.php';
+require_once './head.php';
 
 ?>
   
@@ -52,8 +52,6 @@ require_once 'head.php';
             <input type="text" class="form-control" name="cpf" onkeypress="$(this).mask('000.000.000-00')">
           </div>
         </div>
-   
-
     
         <div class="col-md-3">
             <div class="form-group">
@@ -119,5 +117,5 @@ require_once 'head.php';
 </form>
 
 <?php
-  require_once 'footer-admin.php';
+  require_once './footer-admin.php';
 ?>
