@@ -1,33 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Tempo de geração: 16-Fev-2023 às 03:05
--- Versão do servidor: 10.4.25-MariaDB
--- versão do PHP: 8.1.10
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Banco de dados: `floreca`
---
 CREATE DATABASE IF NOT EXISTS `floreca` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `floreca`;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `cliente`
---
 
 CREATE TABLE `cliente` (
   `idcliente` int(15) NOT NULL,
@@ -42,20 +14,10 @@ CREATE TABLE `cliente` (
   `status` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `cliente`
---
-
 INSERT INTO `cliente` (`idcliente`, `nome`, `telefone`, `cpf`, `rg`, `datanascimento`, `cep`, `numerocasa`, `email`, `status`) VALUES
 (1, 'William Costa', '(21)97070-7070', '120157142-10', '15425798', '1987-04-15', '23036-060', 900, 'william@gmail.com', 'C'),
 (2, 'Sue Costa', '21989247323', '17548215745', '12578954', '1994-02-15', '23036060', 96, 'sue@gmail.com', ''),
 (3, 'Caio Luiz', '21980804545', '12315942012', '15632478', '2001-02-13', '23036060', 14, 'caio@outlook.com', '');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `contacts`
---
 
 CREATE TABLE `contacts` (
   `nome` varchar(255) NOT NULL,
@@ -145,6 +107,7 @@ INSERT INTO `itemservico` (`iditem`, `idservico`, `idprodecimento`, `data`, `hor
 
 CREATE TABLE `procedimento` (
   `idprocedimento` int(11) NOT NULL,
+  `idcategoria` int(11) NOT NULL,
   `nomeprocedimento` varchar(60) NOT NULL,
   `descricao` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -157,11 +120,15 @@ INSERT INTO `procedimento` (`idprocedimento`, `nomeprocedimento`, `descricao`) V
 (1, 'Preenchimento Facial', 'É realizado com a aplicação do ácido hialurônico na pele.'),
 (2, 'Radiofrequência', 'Tratamento eficaz contra flacidez e estimula o colágeno da pele.');
 
--- --------------------------------------------------------
+CREATE TABLE `categoria` (
+  `idcategoria` int(11) NOT NULL,
+  `nomecategoria` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Estrutura da tabela `servico`
---
+INSERT INTO `categoria` (`idcategoria`, `nomecategoria`) VALUES
+(1, 'Facial'),
+(2, 'Corporal');
+
 
 CREATE TABLE `servico` (
   `idservico` int(15) NOT NULL,

@@ -99,7 +99,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h1 class="appointment__form__title">Solicite sua Visita</h1>
+              <h1 class="appointment__form__title">Solicite sua consulta</h1>
             </div>
           </div>
         </div>
@@ -108,8 +108,8 @@
           <div class="row">
             <div class="col-md-5">
               <div class="form-group">
-                <label for="name">Nome e sobrenome</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Seu nome e sobrenome">    
+                <label for="nome">Nome e sobrenome</label>
+                <input type="text" class="form-control" name="nome">    
               </div>
             </div> 
           </div>
@@ -127,7 +127,7 @@
             <div class="col-md-5">
               <div class="form-group">
                 <label for="exampleFormControlInput1">Endereço de e-mail</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                <input type="email" class="form-control" name="email" placeholder="nome@exemplo.com">
               </div>
             </div>
           </div>
@@ -136,20 +136,20 @@
             <div class="col-md-5">
               <div class="form-group">
                   <label for="exampleFormControlSelect2">Selecione sua consulta</label>
-                  <select multiple class="form-control" id="exampleFormControlSelect2">
+                  <select multiple class="form-control" name="message">
                   <option>Limpeza de pele</option>
                     <option>Radiofrequência</option>
                     <option>Preenchimento Facial</option>
                     <option>Toxina Botulínica</option>
                     <option>Ultrassom Cavitacional</option>
                     <option>Intradermoterapia</option>
-                    <option>Laser Galaxy Fiber</option>
+                    <option>Peeling Corporal</option>
                   </select>
               </div>
             </div>
           </div>
           <div class="col-md-12 text-center">
-            <input type="submit" class="button__message" name="btncad" value="Solicitar Visita">
+            <input type="submit" class="button__message" name="btnsoli" value="Solicitar consulta">
           </div>
         </div>
     </form>

@@ -37,8 +37,6 @@
 
         if(!$vazio) {
 
-        // $senha = password_hash($dadoscad['senha'], PASSWORD_DEFAULT);
-
        $sql ="INSERT into cliente(nome,datanascimento,telefone,cpf,rg,cep,numerocasa,email)
               values(:nome,:datanascimento,:telefone,:cpf,:rg,:cep,:numerocasa,:email)";
 
@@ -56,7 +54,7 @@
       if ($salvar->rowCount()) {
 
         echo "<script>
-        alert('Usuário cadastrado com sucesso!');
+        alert('Cliente cadastrado com sucesso!');
         parent.location = 'formulario.php';
         </script>";
         
@@ -64,7 +62,7 @@
      } else {
     
         echo "<script>
-       alert('Usuário não cadastrado!');
+       alert('Cliente não cadastrado!');
        parent.location = 'formulario.php';
        </script>";
         
