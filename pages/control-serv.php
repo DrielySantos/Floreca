@@ -27,13 +27,12 @@
 
     if (!$vazio) {
 
-            $sql = "INSERT INTO procedimento(nomeprocedimento,descricao,valor,idcategoria)
-        VALUES(:nome,:descricao,:valor,:idcategoria)";
+            $sql = "INSERT INTO procedimento(nomeprocedimento,descricao,idcategoria)
+        VALUES(:nomeprocedimento,:descricao,:idcategoria)";
 
     $salvar= $conn->prepare($sql);
     $salvar->bindParam(':nomeprocedimento', $dadosserv['nomeprocedimento'], PDO::PARAM_STR);
     $salvar->bindParam(':descricao', $dadosserv['descricao'], PDO::PARAM_STR);
-    $salvar->bindParam(':valor', $dadosserv['valor'], PDO::PARAM_STR);
     $salvar->bindParam(':idcategoria', $dadosserv['categoria'], PDO::PARAM_STR);   
     $salvar->execute();
 

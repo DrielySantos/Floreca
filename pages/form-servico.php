@@ -34,12 +34,12 @@
         </div>
 
         <div class="row">
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <div class="form-group">
                     <label for="valor">Preço</label>
                     <input type="text" name="valor" class="form-control" onchange="this.value = this.value.replace( /,/g, '.')">
                 </div>
-            </div>
+            </div> -->
 
             <div class="col-md-3">
                 <div class="form-group">
