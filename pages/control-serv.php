@@ -1,5 +1,5 @@
 <?php
-    include_once 'conexao.php';
+    include_once './conexao.php';
     
     if(isset($_SESSION['msg'])){
         echo $_SESSION['msg'];
@@ -27,13 +27,13 @@
 
     if (!$vazio) {
 
-            $sql = "INSERT INTO procedimento(nomeprocedimento,descricao,idcategoria)
-        VALUES(:nomeprocedimento,:descricao,:idcategoria)";
+            $sql = "INSERT INTO procedimento(idprocedimento,nomeprocedimento,descricao,categoria)
+        VALUES(:idprocedimento,:nomeprocedimento,:descricao,:categoria)";
 
     $salvar= $conn->prepare($sql);
     $salvar->bindParam(':nomeprocedimento', $dadosserv['nomeprocedimento'], PDO::PARAM_STR);
     $salvar->bindParam(':descricao', $dadosserv['descricao'], PDO::PARAM_STR);
-    $salvar->bindParam(':idcategoria', $dadosserv['categoria'], PDO::PARAM_STR);   
+    $salvar->bindParam(':categoria', $dadosserv['categoria'], PDO::PARAM_STR);   
     $salvar->execute();
 
     if ($salvar->rowCount()) {
@@ -56,9 +56,7 @@
 
   }
 
-
 if (!empty($dadosserv['btneditar'])) {
-
 
     var_dump($dadosserv);
 

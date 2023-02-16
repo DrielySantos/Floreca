@@ -36,7 +36,6 @@
         </thead>
     <tbody>
 
-
     <?php
     while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {    
     extract($linha);

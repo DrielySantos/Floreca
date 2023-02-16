@@ -120,16 +120,6 @@ INSERT INTO `procedimento` (`idprocedimento`, `nomeprocedimento`, `descricao`) V
 (1, 'Preenchimento Facial', 'É realizado com a aplicação do ácido hialurônico na pele.'),
 (2, 'Radiofrequência', 'Tratamento eficaz contra flacidez e estimula o colágeno da pele.');
 
-CREATE TABLE `categoria` (
-  `idcategoria` int(11) NOT NULL,
-  `nomecategoria` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-INSERT INTO `categoria` (`idcategoria`, `nomecategoria`) VALUES
-(1, 'Facial'),
-(2, 'Corporal');
-
-
 CREATE TABLE `servico` (
   `idservico` int(15) NOT NULL,
   `data` date NOT NULL,

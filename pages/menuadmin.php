@@ -29,6 +29,10 @@
             <li class="nav-item">
               <a class="nav-link" href="./relatorio-func.php">Relatório de Funcionários</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./form-servico.php">Formulário de serviço</a>
+            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
 
