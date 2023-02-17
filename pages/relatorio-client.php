@@ -13,8 +13,9 @@
 
 
     $busca= "SELECT idcliente, cpf, nome, telefone, email 
-              from cliente WHERE status = 'C'
+              from cliente
               LIMIT $inicio , $limitereg";
+            //   WHERE status = 'C'
 
     $resultado = $conn->prepare($busca);
     $resultado->execute();
@@ -70,7 +71,8 @@
     echo "Não tem registros";
 }
 
-  $qtregistro = "SELECT COUNT(idcliente) AS registros FROM cliente WHERE status = 'C' " ;
+  $qtregistro = "SELECT COUNT(idcliente) AS registros FROM cliente"; 
+//   WHERE status = 'C' 
   $resultado = $conn->prepare($qtregistro);
   $resultado->execute();
   $resposta = $resultado->fetch(PDO::FETCH_ASSOC);

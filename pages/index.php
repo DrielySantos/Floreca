@@ -94,12 +94,12 @@
 
 <!-- **************************** MENSAGEM DE AGENDAMENTO *******************************-->
   
-    <form class="scheduling__form">
+    <form class="scheduling__form" method="POST" action="./contatos.php">
 
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h1 class="appointment__form__title">Solicite sua consulta</h1>
+              <h1 class="appointment__form__title">Avaliação Gratuita</h1>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@
           <div class="row">
             <div class="col-md-5">
               <div class="form-group">
-                <label for="nome">Nome e sobrenome</label>
+                <label for="nome">Seu nome completo</label>
                 <input type="text" class="form-control" name="nome">    
               </div>
             </div> 
@@ -118,7 +118,7 @@
             <div class="col-md-5">
               <div class="form-group">
                 <label for="telefone">Telefone</label>
-                <input type="text" class="form-control" name="telefone" onkeypress="$(this).mask('(00)00000-0000')">
+                <input type="text" class="form-control" name="telefone" placeholder="DDD + Número de telefone" onkeypress="$(this).mask('(00)00000-0000')">
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@
             <div class="col-md-5">
               <div class="form-group">
                 <label for="exampleFormControlInput1">Endereço de e-mail</label>
-                <input type="email" class="form-control" name="email" placeholder="nome@exemplo.com">
+                <input type="email" class="form-control" name="email">
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@
           <div class="row">
             <div class="col-md-5">
               <div class="form-group">
-                  <label for="exampleFormControlSelect2">Selecione sua consulta</label>
+                  <label for="exampleFormControlSelect2">Tratamento</label>
                   <select multiple class="form-control" name="message">
                   <option>Limpeza de pele</option>
                     <option>Radiofrequência</option>
@@ -149,11 +149,10 @@
             </div>
           </div>
           <div class="col-md-12 text-center">
-            <input type="submit" class="button__message" name="btnsoli" value="Solicitar consulta">
+            <input type="submit" class="button__message" name="btnsoli" value="Enviar">
           </div>
         </div>
     </form>
-
 <?php
-    require_once 'footer.php';
+    require_once './footer.php';
 ?>
