@@ -10,6 +10,9 @@
     $resultado2=$conn->prepare($sql2);
     $resultado2->execute();
 
+    $sql3 = "SELECT * from procedimento";
+    $resultado3=$conn->prepare($sql3);
+    $resultado3->execute();
 
 ?>
 
@@ -22,50 +25,30 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="nome">Cliente</label>
-                    <input type="text" class="form-control" name="nome">    
-                </div>
-            </div> 
-
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="valor">Preço</label>
-                    <input type="text" name="valor" class="form-control" onchange="this.value = this.value.replace( /,/g, '.')">
-                </div>
-            </div>
-        </div>
+                    <label for="cliente">Cliente</label>
+                    <select name="cliente" class="form-control">
+                            
+                    <?php
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="descricao">Procedimento</label>
-                    <input type="text" name="descricao" class="form-control">
-                </div>
-            </div>
+                        if (($resultado) and ($resultado->rowCount() !=0)) {
+                        while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                        extract($linha);
+                                
+                    ?>
 
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <input type="text" name="descricao" class="form-control">
-                </div>
-            </div>
+                        <option value="<?php echo $idcliente;?>"> <?php echo $nome; ?> </option>
 
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label for="categoria">Local do corpo</label>
-                    <select name="categoria" class="form-control">                  
-                       
-                        <option value="facial">Facial </option>
-                        <option value="corporal">Corporal </option>
-                        <option value="ambos">Ambos </option>
-
+                    <?php
+                            }
+                        }
+                    ?>
                     </select>
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="form-group">
                     <label for="funcionario">Funcionário</label>
                     <select name="funcionario" class="form-control">
@@ -87,9 +70,65 @@
                     </select>
                 </div>
             </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="procedimento">Procedimento</label>
+                    <select name="procedimento" class="form-control">
+                                
+                    <?php
+
+                        if (($resultado3) and ($resultado3->rowCount() !=0)) {
+                        while ($linha3 = $resultado3->fetch(PDO::FETCH_ASSOC)) {
+                        extract($linha3);
+                                    
+                    ?>
+                        <option value="<?php echo $idprocedimento;?>"> <?php echo $nomeprocedimento; ?> </option>
+
+                    <?php
+                            }
+                        }
+                    ?>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="categoria">Local do corpo</label>
+                    <select name="categoria" class="form-control">                  
+                        <option value="facial">Facial </option>
+                        <option value="corporal">Corporal </option>
+                        <option value="ambos">Ambos </option>
+                    </select>
+                </div>
+            </div>
         </div>
 
-        <div class="row">    
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="descrição">Descrição</label>
+                    <textarea class="form-control" name="descrição" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="date">Data</label>
+                    <input type="date" name="date" class="form-control"> 
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="valor">Valor Total</label>
+                    <input type="text" name="valor" class="form-control" onchange="this.value = this.value.replace( /,/g, '.')">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-12 text-center">
                 <input type="submit" class="btn btn-primary" name="btncad" value="Enviar">
             </div>

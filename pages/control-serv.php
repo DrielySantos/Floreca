@@ -27,13 +27,16 @@
 
     if (!$vazio) {
 
-            $sql = "INSERT INTO procedimento(idprocedimento,nomeprocedimento,descricao,categoria)
-        VALUES(:idprocedimento,:nomeprocedimento,:descricao,:categoria)";
+            $sql = "INSERT INTO itemservico(iditem,idservico,idprocedimento,data,horario,valor)
+        VALUES(:iditem,:idservico,:idprocedimento,:data,:horario,:valor)";
 
     $salvar= $conn->prepare($sql);
-    $salvar->bindParam(':nomeprocedimento', $dadosserv['nomeprocedimento'], PDO::PARAM_STR);
-    $salvar->bindParam(':descricao', $dadosserv['descricao'], PDO::PARAM_STR);
-    $salvar->bindParam(':categoria', $dadosserv['categoria'], PDO::PARAM_STR);   
+    $salvar->bindParam(':iditem', $dadosserv['iditem'], PDO::PARAM_STR);
+    $salvar->bindParam(':idservico', $dadosserv['idservico'], PDO::PARAM_STR);
+    $salvar->bindParam(':idprocedimento', $dadosserv['idprocedimento'], PDO::PARAM_STR);
+    $salvar->bindParam(':data', $dadosserv['data'], PDO::PARAM_STR);  
+    $salvar->bindParam(':horario', $dadosserv['horario'], PDO::PARAM_STR); 
+    $salvar->bindParam(':valor', $dadosserv['valor'], PDO::PARAM_STR);
     $salvar->execute();
 
     if ($salvar->rowCount()) {
@@ -64,17 +67,15 @@ if (!empty($dadosserv['btneditar'])) {
 
     $sql = "UPDATE procedimento set nome=:nome,descricao=:descricao,valor=:valor,
     idcategoria=:idcategoria,
-   WHERE codigoproduto =:codigoproduto";
+--    WHERE codigoproduto =:codigoproduto";
 
     $salvar= $conn->prepare($sql);
     $salvar->bindParam(':nomeprocedimento', $dadosserv['nomeprocedimento'], PDO::PARAM_STR);
     $salvar->bindParam(':descricao', $dadosserv['descricao'], PDO::PARAM_STR);
     $salvar->bindParam(':valor', $dadosserv['valor'], PDO::PARAM_STR);
     $salvar->bindParam(':idcategoria', $dadosserv['categoria'], PDO::PARAM_STR);   
-    $salvar->bindParam(':codigoproduto', $dadosprod['codigo'], PDO::PARAM_INT);
-
-
-$salvar->execute();
+    // $salvar->bindParam(':codigoproduto', $dadosprod['codigo'], PDO::PARAM_INT);
+    $salvar->execute();
 
     if ($salvar->rowCount()) {
         
