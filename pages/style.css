@@ -1,6 +1,7 @@
 
 /* ***************** CORPO DO SITE ***************** */
 body{
+    /* font-family: Brandon Text, sans-serif; */
     margin: 0;
     padding: 0;
     height: 100%;
@@ -8,12 +9,18 @@ body{
     overflow-x: hidden;
     background: #dedede;
 }
-/* dropdown-item */
+/********************* dropdown-item ********************/
 .dropdown-item:hover {
     padding-left: 30px;
     border-left: 4px solid #c74cc9;
     color: #783679;
     transition: .3s;
+}
+/* *****************************************************/
+
+/****************** PRIMEIRO CONTEÚDO ******************/
+.content__title{
+    margin-top: 50px;
 }
 
 /****************** SEGUNDO CONTEÚDO ******************/

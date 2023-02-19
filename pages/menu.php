@@ -35,6 +35,10 @@
             </div>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="#">Trabalhe Conosco</a>
+          </li>
+
           <!-- <li class="nav-item">
             <a class="nav-link" href="agenda.php">Contatos</a>
           </li> -->
