@@ -42,7 +42,7 @@
       <div class="container-fluid">
         <div class="row text-center">
           <div class="col-md-12 ">
-            <h2 class="content__title">Conheça o Floreça</h2>
+            <h2 class="content__title">Floreça</h2>
             <h6>A melhor clínica de estética do Brasil</h6>
             <span>Profissionais experientes  |  A maior oferta do mercado  |  A melhor solução para si </span>
           </div>
@@ -67,10 +67,45 @@
             <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
           </div>
         </div>
-      </div> 
 
-      
+        <div class="row justify-content-center">
+          <div class="col-md-3 col-sm">
+            <div class="card">
+              <img class="card-img-top" src="./imagens/facial-2.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">Preenchimento Facial</h5>
+                <p class="card-text">Procedimento para embelezamento e reestruturação da pele envelhecida.</p>
+                <a href="./facial.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-md-3 col-sm">
+            <div class="card">
+              <img class="card-img-top" src="./imagens/facial-2.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">Preenchimento Facial</h5>
+                <p class="card-text">Procedimento para embelezamento e reestruturação da pele envelhecida.</p>
+                <a href="./facial.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm">
+            <div class="card">
+              <img class="card-img-top" src="./imagens/facial-2.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">Preenchimento Facial</h5>
+                <p class="card-text">Procedimento para embelezamento e reestruturação da pele envelhecida.</p>
+                <a href="./facial.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
 
 <!-- *************** SEGUNDO CONTEÚDO ***************** -->
 

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Satisfy&display=swap');
+
+
 
 /* ***************** CORPO DO SITE ***************** */
 body{
-    /* font-family: Brandon Text, sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
     margin: 0;
     padding: 0;
     height: 100%;
@@ -21,6 +24,40 @@ body{
 /****************** PRIMEIRO CONTEÚDO ******************/
 .content__title{
     margin-top: 50px;
+    font-family: 'Satisfy', cursive;
+    font-size: 70px;
+}
+
+.card{
+    width: 15rem;
+    border-radius: 40px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.card a{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(38, 71, 114);
+    padding: 6px 12px;
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid #2c3e50;
+    border-radius: 50px;
+    transition: 0.6s all;
+}
+
+.card p{
+    font-size: 14px;
+    transition: 0.6s all;
+}
+
+.card-img-top{
+  border-radius: 40px 40px 0 0;
+  width: 100%;
+  height: 50%;
 }
 
 /****************** SEGUNDO CONTEÚDO ******************/
@@ -160,12 +197,37 @@ body{
 
 /********** PÁGINAS DE TRATAMENTO PADRÃO ***********/
 
+.box{
+    background-color: #fff;
+}
+.standard_main_title{
+    margin: 40px;
+    border-bottom: 1px solid #000;
+}
+.standard__title{
+    margin: 20px;
+    
+}
 
+.standard__text{
+    text-align: justify;
+    text-indent: 25px;
+}
+
+.standard__photo {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 400px;
+    height: 200px;
+    border-radius: 40px 0 40px 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
 
 /********************* RODAPÉ **********************/
 
 .footer{
-    background:#d7d7d6;
+    background:#d4d49b;
     /* border-top: 1px solid rgb(3, 3, 3); */
 }
 

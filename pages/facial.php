@@ -3,36 +3,65 @@
     require_once './menu.php';
 ?>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2>Preenchimento Facial: Como funciona?</h2>
-            </div>
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="standard_main_title">Preenchimento facial: quais os benefícios</h1>
         </div>
+      </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="/pages/imagens/" class="firt__photo" alt="" >           
-                <img src="/pages/imagens/" class="second__photo" alt="" >           
-                <img src="/pages/imagens/" class="third__photo" alt="" >   
-            </div>
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-6 col-sm">
+          <img src="./imagens/facial-1.jpg" class="img-fluid standard__photo" alt="demonstração de procedimento facial">
+        </div>
+        <div class="col-md-6 col-sm">
+          <h4 class="radio__frequency__title">Pra que servem os preenchedores faciais?</h4>
+            <p class="radio__frequency__text">O preenchimento facial é um procedimento para embelezamento e reestruturação da pele envelhecida. O ácido hialurônico é uma das substâncias mais utilizadas e mais seguras
+            para esta finalidade. Ele preenche rugas e sulcos, melhora o contorno facial, pode também ser utilizado para aumentar o volume dos lábios. Este procedimento não tem finalidade somente ESTÉTICA e sim corretora funcional devido a perda de sustentação  devido às alterações relacionadas ao envelhecimento.</p>
+        </div>
+      </div>
+    </div>
 
-            <div class="col-md-6 col-sm facial__filler">
-                <h4>Pra que servem os preenchedores faciais?</h4>
-                    <p>O preenchimento facial é um procedimento para embelezamento e reestruturação da pele envelhecida. O ácido hialurônico é uma das substâncias mais utilizadas e mais seguras
-                    para esta finalidade. Ele preenche rugas e sulcos, melhora o contorno facial, pode também ser utilizado para aumentar o volume dos lábios. Este procedimento não tem 
-                    finalidade somente ESTÉTICA e sim corretora funcional devido a perda de sustentação  devido às alterações relacionadas ao envelhecimento. </p>
-
-                <h4>Quais os resultados que devo esperar?</h4>
-                    <p>Os resultados são associados à devolução de volumes faciais perdidos, correção do contorno de face, mandíbula, queixo e têmporas, redução ou eliminação de sulcos
+    <div class="container-fluid text-center box">
+      <div class="row">
+        <div class="col-md-6 col-sm">
+            <h4 class="standard__title">Quais os resultados que devo esperar?</h4>
+                <p class="standard__text">Os resultados são associados à devolução de volumes faciais perdidos, correção do contorno de face, mandíbula, queixo e têmporas, redução ou eliminação de sulcos
                     de expressão e marcas associadas ao envelhecimento ou mesmo para o embelezamento e hidratação dos lábios</p>
-            </div>
+            <h4 class="standard__title"></h4>
+                <p class="standard__text"></p>
         </div>
+
+        <div class="col-md-6 col-sm">
+          <img src="./imagens/facial-2.jpg" class="img-fluid standard__photo" alt="demonstração de procedimento facial">
+          <h4 class="standard__title">Quais são os benefícios do preenchimento facial?</h4>
+            <p class="standard__text">Um dos principais benefícios do preenchimento facial, é a possibilidade de ter a pele rejuvenescida. Com o passar do tempo a pele perde elasticidade e firmeza, ocasionando o aparecimento de rugas, marcas de expressão e manchas.Correção de cicatrizes, marcas de cravos, espinhas e remodelagem dos contornos faciais.</p>
+        </div>
+      </div>
     </div>
 
-    
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-6 col-sm">
+          <img src="./imagens/facial-3.jpg" class="img-fluid standard__photo" alt="demonstração de procedimento facial">
+        </div>
+        <div class="col-md-6 col-sm">
+            <h4 class="standard__title">Quais são as regiões que podem receber preenchimento?</h4>
+                <p class="standard__text">O preenchimento, por ser um procedimento seguro e com resultados satisfatórios, pode ser feito em várias regiões da face, são elas:</p>
+                <ul class="list">
+                  <li>Abaixo dos olhos – olheiras;</li>
+                  <li>Ao redor dos lábios – Bigode chinês e Linha de marionete;</li>
+                  <li>Laterais da face – Têmporas.</li>
+                  <li>Lábios;</li>
+                  <li>Mandíbula;</li>
+                  <li>Queixo – Mento;</li>
+                  <li>Maçãs do rosto;</li>
+                </ul>
+        </div>
+      </div>
+    </div>
 
 
 <?php
@@ -40,32 +69,35 @@
 ?>
 
 <style>
-    img {
-        width: 200px;
-        height: 200px;
+
+    .box{
+        background-color: #fff;
+    }
+    .standard_main_title{
         margin: 40px;
-        /* margin-bottom: 300px; */
-        border-radius: 50%;
-        border: 2px solid #fff;
+        border-bottom: 1px solid #000;
+    }
+    .standard__title{
+        margin: 20px;
+        
     }
 
-    .firt__photo {
-        margin-bottom:300px;
+    .standard__text{
+        text-align: justify;
+        text-indent: 25px;
+    }
+    
+    .standard__photo {
+        margin-top: 10px;
+        margin-bottom: 25px;
+        width: 400px;
+        height: 200px;
+        border-radius: 40px 0 40px 0;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
     }
 
-    .second__photo {
-        margin-top:200px;
+    .list li{
+        text-align: left;
     }
-
-    .third__photo {
-        margin-bottom:300px;
-    }
-
-    .facial__filler {
-       margin-top: 130px;
-       margin-bottom: 130px;
-     
-    }
-
-</style>
-
+    
