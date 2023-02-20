@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <img src="/pages/imagens/radiofrequencia-1.jpg" alt="demonstração de radiofrequencia">
+                <img src="./imagens/radiofrequencia-1.jpg" alt="demonstração de radiofrequencia">
             </div>
         </div>
         
