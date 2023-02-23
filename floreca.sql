@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Fev-2023 às 20:56
+-- Tempo de geração: 23-Fev-2023 às 20:58
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -109,9 +109,9 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`idfuncionario`, `cpffuncionario`, `nome`, `telefone`, `rg`, `cep`, `numerocasa`, `foto`, `email`) VALUES
-('', '123', 'Mário Silva', '(21)9999-8888', '0001', '23085-610', 40, 'vazio', ''),
-('', '456', 'Gabriel Silva', '(21)9999-7777', '0002', '26551-090', 100, 'vazio', ''),
-('', '789', 'Mariana Souza', '(21)9999-5555', '1234', '23085-610', 1820, 'vazio', '');
+('1', '123', 'Mário Silva', '(21)9999-8888', '0001', '23085-610', 40, 'vazio', ''),
+('2', '456', 'Gabriel Silva', '(21)9999-7777', '0002', '26551-090', 100, 'vazio', ''),
+('3', '789', 'Mariana Souza', '(21)9999-5555', '1234', '23085-610', 1820, 'vazio', '');
 
 -- --------------------------------------------------------
 
@@ -125,7 +125,8 @@ CREATE TABLE `itemservico` (
   `idprodecimento` int(11) NOT NULL,
   `data` date NOT NULL,
   `horario` varchar(30) NOT NULL,
-  `valor` varchar(30) NOT NULL
+  `valor` varchar(30) NOT NULL,
+  `categoria` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -137,16 +138,17 @@ CREATE TABLE `itemservico` (
 CREATE TABLE `procedimento` (
   `idprocedimento` int(11) NOT NULL,
   `nomeprocedimento` varchar(60) NOT NULL,
-  `descricao` varchar(100) NOT NULL
+  `descricao` varchar(100) NOT NULL,
+  `valor` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `procedimento`
 --
 
-INSERT INTO `procedimento` (`idprocedimento`, `nomeprocedimento`, `descricao`) VALUES
-(1, 'Preenchimento Facial', 'É realizado com a aplicação do ácido hialurônico na pele.'),
-(2, 'Radiofrequência', 'Tratamento eficaz contra flacidez e estimula o colágeno da pele.');
+INSERT INTO `procedimento` (`idprocedimento`, `nomeprocedimento`, `descricao`, `valor`) VALUES
+(1, 'Preenchimento Facial', 'É realizado com a aplicação do ácido hialurônico na pele.', 500),
+(2, 'Radiofrequência', 'Tratamento eficaz contra flacidez e estimula o colágeno da pele.', 350);
 
 -- --------------------------------------------------------
 
@@ -173,6 +175,33 @@ INSERT INTO `servico` (`idservico`, `data`, `horario`, `valor`, `idcliente`, `id
 (2, '2022-12-09', 'de 08:00 às 9:00h', '', '', 1, 2),
 (3, '2022-12-06', 'de 07:00 às 08:00h', '', '', 2, 2);
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `servico_temp`
+--
+
+CREATE TABLE `servico_temp` (
+  `idcliente` int(11) NOT NULL,
+  `idfuncionario` int(11) NOT NULL,
+  `idprocedimento` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `horario` varchar(30) NOT NULL,
+  `valor` double NOT NULL,
+  `nomeproced` varchar(60) NOT NULL,
+  `categoria` varchar(40) NOT NULL,
+  `nomecli` varchar(60) NOT NULL,
+  `nomefunc` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `servico_temp`
+--
+
+INSERT INTO `servico_temp` (`idcliente`, `idfuncionario`, `idprocedimento`, `data`, `horario`, `valor`, `nomeproced`, `categoria`, `nomecli`, `nomefunc`) VALUES
+(2, 2, 2, '2023-02-14', '18:37', 350, 'Radiofrequência', 'corporal', 'Sue Costa', 'Gabriel Silva'),
+(1, 3, 1, '2023-02-21', '18:37', 500, 'Preenchimento Facial', 'facial', 'William Costa', 'Mariana Souza');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -184,6 +213,18 @@ ALTER TABLE `cliente`
   ADD PRIMARY KEY (`idcliente`);
 
 --
+-- Índices para tabela `funcionario`
+--
+ALTER TABLE `funcionario`
+  ADD PRIMARY KEY (`idfuncionario`);
+
+--
+-- Índices para tabela `procedimento`
+--
+ALTER TABLE `procedimento`
+  ADD PRIMARY KEY (`idprocedimento`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -192,6 +233,16 @@ ALTER TABLE `cliente`
 --
 ALTER TABLE `cliente`
   MODIFY `idcliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `servico_temp`
+--
+ALTER TABLE `servico_temp`
+  ADD CONSTRAINT `fk_idprocedimento` FOREIGN KEY (`idprocedimento`) REFERENCES `procedimento` (`idprocedimento`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
