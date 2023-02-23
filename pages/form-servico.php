@@ -18,7 +18,7 @@
 
 ?>
 
-<form method="POST" action="control-serv.php" enctype="multipart/form-data">
+<form method="POST" action="cartao.php" enctype="multipart/form-data">
     <div class="container">
         <div class="row">
                 <div class="col-md-12 text-center">
@@ -39,14 +39,16 @@
                         extract($linha);
                                 
                     ?>
-
-                        <option value="<?php echo $idcliente;?>"> <?php echo $nome; ?> </option>
+                       
+                        <option value="<?php echo $idcliente;?>"> <?php echo $nome;?></option>
+                       
 
                     <?php
                             }
                         }
                     ?>
                     </select>
+                    
                 </div>
             </div>
 
@@ -69,6 +71,7 @@
                                 }
                             }
                         ?>
+                       
                     </select>
                 </div>
             </div>

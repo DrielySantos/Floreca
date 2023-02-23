@@ -10,7 +10,7 @@
 
     if(($resultado)and($resultado->RowCount()!=0)){
 
-?>~
+?>
 
     <form action="./finaliza-serv.php" method="post">
         <table class="table">
@@ -20,10 +20,11 @@
                     <th scope="col">Cliente</th>
                     <th scope="col">Funcionário</th>
                     <th scope="col">Procedimento</th>
+                    <th scope="col">Categoria</th>
                     <th scope="col">Data</th>
                     <th scope="col">Horario</th>
                     <th scope="col">Preço</th>
-                    <th scope="col">Total</th>       
+                       
                 </tr>
             </thead>
         <tbody>
@@ -35,18 +36,16 @@
     
 ?>        
         <tr>
-          <td scope="row"></td>
-          <td><?php echo $cliente ?></td>
-          <td><?php echo $funcionario ?></td>
-          <td><?php echo $procedimento ?></td>
+          <!-- <td ></td> -->
+          <td scope="row"><?php echo $nomecli ?></td>
+          <td><?php echo $nomefunc ?></td>
+          <td><?php echo $nomeproced ?></td>
+          <td><?php echo $categoria ?></td>
           <td><?php echo $data ?></td>
           <td><?php echo $horario ?></td>
           <td><?php echo $valor ?></td>
-          <td><?php echo $quantserv ?></td>
-          <td><?php echo $total = $quantserv * $valor;
-                         $totalcompra += $total; ?></td>
-         
-            <td>      
+          <td>
+          
                 <a href="./finaliza-serv.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $idcliente; ?>">Excluir</button></a>
             </td>
         </tr>        
@@ -56,7 +55,7 @@
     } 
 ?>
 
-    <tr><td><?php echo "Total do serviço - R$".$totalcompra; ?></td></tr>
+    <tr><td><?php echo "Total do serviço - R$".$valor; ?></td></tr>
 
         </tbody>
     </table>

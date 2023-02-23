@@ -243,3 +243,12 @@ ALTER TABLE `servico`
   ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idcliente`),
   ADD CONSTRAINT `fk_funcionario` FOREIGN KEY (`idfuncionario`) REFERENCES `funcionario` (`idfuncionario`);
 COMMIT;
+
+create table `servico_temp`(
+  `idcliente` int(15) NOT NULL,
+  `idfuncionario` int(15) NOT NULL,
+  `idprodecimento` int(15) NOT NULL,
+  `data` date NOT NULL,
+  `horario` varchar(30) NOT NULL,
+  `valor` double NOT NULL
+)
