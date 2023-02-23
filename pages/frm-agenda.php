@@ -69,3 +69,5 @@
     }
     require_once './footer-admin.php';
 ?>
+
+<!-- compra -->
