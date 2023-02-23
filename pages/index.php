@@ -168,16 +168,16 @@
     <form class="scheduling__form" method="POST" action="./contatos.php">
 
         <div class="container-fluid">
-          <div class="row">
+          <div class="row ">
             <div class="col-md-12 text-center">
               <h1 class="appointment__form__title">Solicite sua avaliação gratuita!</h1>
-              <p>Preencha o formulário abaixo com seus dados corretamente e a nós entraremos em contato com você para maiores detalhes.</p>
+              <p>Preencha o formulário abaixo com seus dados corretamente e nós entraremos em contato com você para maiores detalhes.</p>
             </div>
           </div>
         </div>
 
         <div class="container">
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-5">
               <div class="form-group">
                 <label for="nome">Seu nome completo</label>
@@ -186,7 +186,7 @@
             </div> 
           </div>
               
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-5">
               <div class="form-group">
                 <label for="telefone">Telefone</label>
@@ -195,7 +195,7 @@
             </div>
           </div>
                 
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-5">
               <div class="form-group">
                 <label for="exampleFormControlInput1">Endereço de e-mail</label>
@@ -204,7 +204,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-5">
               <div class="form-group">
                   <label for="exampleFormControlSelect2">Tratamento</label>
@@ -224,11 +224,6 @@
             <input type="submit" class="button__message" name="btnsoli" value="Enviar">
           </div>
         </div>
-
-        <!-- <span class="font" style="font-family: arial, helvetica, sans-serif, sans-serif"><span class="size" style="background-color: inherit; font-size: 12px">Ao preencher o formulário, você está ciente que poderemos enviar, de tempos em tempos, comunicações e conteúdos de acordo com os seus interesses. Você pode modificar as suas permissões a qualquer tempo. Para mais informações sobre alterações de preferências e nossas práticas para respeitar a sua privacidade, confira a nossa </span></span>
-        <a href="./policies.php" target="_blank" rel="noopener noreferrer"><span class="font" style="font-family: arial, helvetica, sans-serif, sans-serif"><span class="size" style="background-color: inherit; font-size: 12px">Política de Privacidade.
-        </span></span></a>
-        <span class="size" style="font-size: 12px"><br></span> -->
     </form>
 
 
@@ -284,17 +279,6 @@
   .list__title{
     text-align: justify;
   }
-
-  /* .list__text .text {
-    color: #777288;
-    margin-top: 4px;
-    line-height: 1.4;
-  }
-
-  .list__text .text p:first-child {
-    margin-top: 0;
-  } */
-
 </style>
 
 

@@ -1,106 +1,49 @@
 <?php
-    require_once './head.php';
-    require_once './menu.php';
-?>
 
-    <div class="container-fluid pag-principal">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h5>Aguma coisa aqui</h5>
-                <h3>Nossos Tratamentos</h3>
-            </div>
-        </div>
-    </div>
+    require_once './conexao.php';
 
-    <div class="container">
-        <div class="row carousel">
-            <div class="cards-list">
-                <div class="col-md-3">
-                    <div class="card">
-                        <img class="card-img-top" src="./imagens/dog.webp" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Botox</h5>
-                            <p class="card-text">A solução contra: rugas, pés de galinha e código de barras.</p>
-                            <a href="http://">Clique e confira</a>
-                        </div>
-                    </div>
-                </div>
+    session_start();
+    ob_start();
 
-                <div class="col-md-3">
-                    <div class="card">
-                        <img class="card-img-top" src="./imagens/dog.webp" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Botox</h5>
-                            <p class="card-text">A solução contra: rugas, pés de galinha e código de barras.</p>
-                            <a href="http://">Clique e confira</a>
-                        </div>
-                    </div>
-                </div> 
+    $_SESSION["quant"]+=1;
 
-                <div class="col-md-3">
-                    <div class="card">
-                        <img class="card-img-top" src="./imagens/dog.webp" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Botox</h5>
-                            <p class="card-text">A solução contra: rugas, pés de galinha e código de barras.</p>
-                            <a href="http://">Clique e confira</a>
-                        </div>
-                    </div>
-                </div> 
+    echo $_SESSION["quant"];
 
-                
-            </div>
-        </div>
+    $cesta = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+    // var_dump($cesta);
 
-   
-    <style>
+    $idservico = $cesta["idservico"];
+    $quantserv = $cesta["quantserv"];
 
-.cards-list {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+    $sql = "SELECT idservico,idcliente,idfuncionario,valor
+    FROM servico
+    WHERE idservico = $idservico LIMIT 1";
 
-        .card{
-            margin: 20px auto;
-            width: 300px;
-            height: 350px;
-            border-radius: 40px ;
-            box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-            cursor: pointer;
-            position: relative;
-            z-index: 1;
-            transition: 0.4s;
+    $resultado= $conn->prepare($sql);
+    $resultado->execute();
+
+    if(($resultado)and($resultado->RowCount()!=0)){
+        $linha=$resultado->fetch(PDO::FETCH_ASSOC);
+        extract($linha);
+        
+        if($quantidade<$quantserv){        
+            header("Location:./index.php");
+        }
+        else{
+            $sql2 = "INSERT into servico(idservico,valor,idcliente,idfuncionario) values (:idservico,:valor,:idcliente,:idfuncionario)";
+            $salvar2= $conn->prepare($sql2);
+            $salvar2->bindParam(':idservico', $data, PDO::PARAM_STR);
+            $salvar2->bindParam(':valor', $valor, PDO::PARAM_STR);
+            $salvar2->bindParam(':idcliente', $idcliente, PDO::PARAM_STR);
+            $salvar2->bindParam(':valor', $valor, PDO::PARAM_STR);
+            $salvar2->bindParam(':idfuncionario', $idfuncionario, PDO::PARAM_STR);
+            $salvar2->execute();
+
+
         }
 
-        .card:hover {
-            transform: scale(0.9, 0.9);
-            box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
 }
 
-       .card-body a{
-        text-decoration: none;
-        color: #fff;
-        background-color: rgb(30, 81, 75);
-        margin-left: 60px;
-        margin-bottom: 20px;
-        padding: 6px 12px;
-        display: inline-block;
-        font-size: 14px;
-        border: 1px solid #2c3e50;
-        border-radius: 50px;
-        transition: 0.6s all;
-       }
-        .card-img-top{
-            border-radius: 40px 40px 0 0;
-        }
-    </style>
 
 
-
-
-<?php
-    require_once './footer.php';
 ?>

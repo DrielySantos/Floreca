@@ -1,6 +1,8 @@
 <?php
     require_once './head.php';
+    require_once './menuadmin.php';
     include_once './conexao.php';
+
 
     $sql = "SELECT * from cliente";
     $resultado=$conn->prepare($sql);
@@ -122,6 +124,13 @@
 
             <div class="col-md-3">
                 <div class="form-group">
+                    <label for="time">Hora</label>
+                    <input type="time" name="hora" class="form-control"> 
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
                     <label for="valor">Valor Total</label>
                     <input type="text" name="valor" class="form-control" onchange="this.value = this.value.replace( /,/g, '.')">
                 </div>
@@ -130,11 +139,22 @@
 
         <div class="row">
             <div class="col-md-12 text-center">
-                <input type="submit" class="btn btn-primary" name="btncad" value="Enviar">
+                <input type="submit" class="btn btn-primary" name="btncad" value="Ok">
+            </div>
+        </div>
+        
+        <div class="row save__service">
+            <div class="col-md-12 text-center">
+                <input type="submit" class="btn btn-primary" name="" value="Salvar serviço">
             </div>
         </div>
 </form>
 
+<style>
+    .save__service{
+        margin-top: 10px;
+    }
+</style>
 <?php
     require_once './footer-admin.php';
 ?>

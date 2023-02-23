@@ -15,7 +15,7 @@
            
             echo "<script>
         alert('Preencher todos os campos!!!');
-        parent.location = 'index.php';
+        parent.location = './index.php';
         </script>";
 
         } else if(!filter_var($dadoscad['email'], FILTER_VALIDATE_EMAIL)) {
@@ -23,7 +23,7 @@
 
             echo "<script>
             alert('Informe um e-mail válido!!');
-            parent.location = 'index.php';
+            parent.location = './index.php';
             </script>";
         }
     
@@ -47,15 +47,15 @@
     if ($salvar->rowCount()) {
         
         echo "<script>
-        alert('mensagem cadastrado com sucesso!!');
-        parent.location = 'index.php';
+        alert('Mensagem enviada com sucesso!');
+        parent.location = './index.php';
         </script>";
 
         unset($dadoscad);
     } else {
         echo "<script>
-        alert('mensagem não cadastrado!');
-        parent.location = 'index.php';
+        alert('Mensagem não enviada!');
+        parent.location = './index.php';
         </script>";
         
     }
