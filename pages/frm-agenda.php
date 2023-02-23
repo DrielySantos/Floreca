@@ -10,7 +10,8 @@
 
     if(($resultado)and($resultado->RowCount()!=0)){
 
-        ?>
+?>~
+
     <form action="./finaliza-serv.php" method="post">
         <table class="table">
             <thead>
@@ -34,15 +35,19 @@
     
 ?>        
         <tr>
-          <td scope="row"><img src="<?php echo $foto ?>"style=widht:100px;height:100px;></td>
-          <td><?php echo $nome ?></td>
+          <td scope="row"></td>
+          <td><?php echo $cliente ?></td>
+          <td><?php echo $funcionario ?></td>
+          <td><?php echo $procedimento ?></td>
+          <td><?php echo $data ?></td>
+          <td><?php echo $horario ?></td>
           <td><?php echo $valor ?></td>
           <td><?php echo $quantserv ?></td>
           <td><?php echo $total = $quantserv * $valor;
                          $totalcompra += $total; ?></td>
          
             <td>      
-                <a href="./finaliza-serv.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $codigoproduto; ?>">Excluir</button></a>
+                <a href="./finaliza-serv.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $idcliente; ?>">Excluir</button></a>
             </td>
         </tr>        
          
@@ -63,4 +68,5 @@
 
 <?php
     }
+    require_once './footer-admin.php';
 ?>

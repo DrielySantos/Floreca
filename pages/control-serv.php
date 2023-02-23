@@ -27,17 +27,18 @@
 
     if (!$vazio) {
 
-            $sql = "INSERT INTO itemservico(iditem,idservico,idprocedimento,data,horario,valor)
-        VALUES(:iditem,:idservico,:idprocedimento,:data,:horario,:valor)";
+            $sql = "INSERT INTO servico(idservico,idfuncionario,idcliente,valor)
+        VALUES(:idservico,:idfuncionario,:idcliente,:valor)";
 
-    $salvar= $conn->prepare($sql);
-    $salvar->bindParam(':iditem', $dadosserv['iditem'], PDO::PARAM_STR);
-    $salvar->bindParam(':idservico', $dadosserv['idservico'], PDO::PARAM_STR);
-    $salvar->bindParam(':idprocedimento', $dadosserv['idprocedimento'], PDO::PARAM_STR);
-    $salvar->bindParam(':data', $dadosserv['data'], PDO::PARAM_STR);  
-    $salvar->bindParam(':horario', $dadosserv['horario'], PDO::PARAM_STR); 
-    $salvar->bindParam(':valor', $dadosserv['valor'], PDO::PARAM_STR);
-    $salvar->execute();
+        $salvar= $conn->prepare($sql);
+        // $salvar->bindParam(':iditem', $dadosserv['iditem'], PDO::PARAM_STR);
+        $salvar->bindParam(':idservico', $dadosserv['idservico'], PDO::PARAM_STR);
+        $salvar->bindParam(':idfuncionario', $dadosserv['idfuncionario'], PDO::PARAM_STR);
+        $salvar->bindParam(':idcliente', $dadosserv['idcliente'], PDO::PARAM_STR);
+        // $salvar->bindParam(':data', $dadosserv['data'], PDO::PARAM_STR);  
+        // $salvar->bindParam(':horario', $dadosserv['horario'], PDO::PARAM_STR); 
+        $salvar->bindParam(':valor', $dadosserv['valor'], PDO::PARAM_STR);
+        $salvar->execute();
 
     if ($salvar->rowCount()) {
         

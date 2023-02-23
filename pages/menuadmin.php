@@ -1,5 +1,5 @@
 <?php
-    require_once 'head.php';
+    require_once './head.php';
 
     session_start();
     ob_start();
@@ -43,8 +43,8 @@
           </ul>
           <form class="form-inline my-2 my-lg-0">
 
-            <a href="./save-agenda.php">
-            <img src="./imagens/pagamento-seguro.png" style=width:50px;height:50px;></a>
+            <a href="./frm-agenda.php">
+            <img src="./imagens/pagamento-seguro.png" style=width:40px;height:40px;></a>
             <?php 
               if($_SESSION["quant"]>0){
                  echo $_SESSION["quant"]; 

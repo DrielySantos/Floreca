@@ -100,9 +100,9 @@ INSERT INTO `funcionario` (
 --
 
 CREATE TABLE `itemservico` (
-  `iditem` int(11) NOT NULL,
-  `idservico` int(11) NOT NULL,
-  `idprodecimento` int(11) NOT NULL,
+  `iditem` int(15) NOT NULL,
+  `idservico` int(15) NOT NULL,
+  `idprodecimento` int(15) NOT NULL,
   `data` date NOT NULL,
   `horario` varchar(30) NOT NULL,
   `valor` double NOT NULL
