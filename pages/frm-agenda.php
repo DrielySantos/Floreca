@@ -2,6 +2,8 @@
     require_once './head.php';
     require './menu.php';
     include_once './conexao.php';
+    session_start();
+    ob_start();
 
     $totalservice = 0;
     $sql = "SELECT * from servico_temp";

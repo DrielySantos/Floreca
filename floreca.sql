@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Fev-2023 às 20:58
+-- Tempo de geração: 24-Fev-2023 às 01:56
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -48,7 +48,8 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`idcliente`, `nome`, `telefone`, `cpf`, `rg`, `datanascimento`, `cep`, `numerocasa`, `email`, `status`) VALUES
 (1, 'William Costa', '(21)97070-7070', '120157142-10', '', '1987-04-15', '23036-060', 900, 'william@gmail.com', 'C'),
-(2, 'Sue Costa', '21989247323', '17548215745', '12578954', '1994-02-15', '23036060', 96, 'sue@gmail.com', '');
+(2, 'Sue Costa', '21989247323', '17548215745', '12578954', '1994-02-15', '23036060', 96, 'sue@gmail.com', ''),
+(3, 'Maria Vaz', '21985474521', '12515412470', '12024589', '1987-04-25', '23036060', 52, 'mariavaz@gmail.com', '');
 
 -- --------------------------------------------------------
 
@@ -121,6 +122,7 @@ INSERT INTO `funcionario` (`idfuncionario`, `cpffuncionario`, `nome`, `telefone`
 
 CREATE TABLE `itemservico` (
   `iditem` int(11) NOT NULL,
+  `idfuncionario` int(11) NOT NULL,
   `idservico` int(11) NOT NULL,
   `idprodecimento` int(11) NOT NULL,
   `data` date NOT NULL,
@@ -161,19 +163,8 @@ CREATE TABLE `servico` (
   `data` date NOT NULL,
   `horario` varchar(30) NOT NULL,
   `valor` double NOT NULL,
-  `idcliente` varchar(30) NOT NULL,
-  `idfuncionario` int(11) NOT NULL,
-  `idprocedimento` int(11) NOT NULL
+  `idcliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `servico`
---
-
-INSERT INTO `servico` (`idservico`, `data`, `horario`, `valor`, `idcliente`, `idfuncionario`, `idprocedimento`) VALUES
-(1, '2022-12-05', 'de 15:00 às 15:30h', '', '', 1, 1),
-(2, '2022-12-09', 'de 08:00 às 9:00h', '', '', 1, 2),
-(3, '2022-12-06', 'de 07:00 às 08:00h', '', '', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -199,8 +190,8 @@ CREATE TABLE `servico_temp` (
 --
 
 INSERT INTO `servico_temp` (`idcliente`, `idfuncionario`, `idprocedimento`, `data`, `horario`, `valor`, `nomeproced`, `categoria`, `nomecli`, `nomefunc`) VALUES
-(2, 2, 2, '2023-02-14', '18:37', 350, 'Radiofrequência', 'corporal', 'Sue Costa', 'Gabriel Silva'),
-(1, 3, 1, '2023-02-21', '18:37', 500, 'Preenchimento Facial', 'facial', 'William Costa', 'Mariana Souza');
+(2, 2, 1, '2023-02-15', '22:48', 500, 'Preenchimento Facial', 'facial', 'Sue Costa', 'Gabriel Silva'),
+(2, 2, 2, '2023-02-15', '22:48', 350, 'Radiofrequência', 'corporal', 'Sue Costa', 'Gabriel Silva');
 
 --
 -- Índices para tabelas despejadas
@@ -219,10 +210,25 @@ ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`idfuncionario`);
 
 --
+-- Índices para tabela `itemservico`
+--
+ALTER TABLE `itemservico`
+  ADD PRIMARY KEY (`iditem`),
+  ADD KEY `fk_idservico` (`idservico`),
+  ADD KEY `fk_procedimento` (`idprodecimento`);
+
+--
 -- Índices para tabela `procedimento`
 --
 ALTER TABLE `procedimento`
   ADD PRIMARY KEY (`idprocedimento`);
+
+--
+-- Índices para tabela `servico`
+--
+ALTER TABLE `servico`
+  ADD PRIMARY KEY (`idservico`),
+  ADD KEY `fk-cliente` (`idcliente`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -232,11 +238,30 @@ ALTER TABLE `procedimento`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `idcliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idcliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `itemservico`
+--
+ALTER TABLE `itemservico`
+  MODIFY `iditem` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restrições para despejos de tabelas
 --
+
+--
+-- Limitadores para a tabela `itemservico`
+--
+ALTER TABLE `itemservico`
+  ADD CONSTRAINT `fk_idservico` FOREIGN KEY (`idservico`) REFERENCES `servico` (`idservico`),
+  ADD CONSTRAINT `fk_procedimento` FOREIGN KEY (`idprodecimento`) REFERENCES `procedimento` (`idprocedimento`);
+
+--
+-- Limitadores para a tabela `servico`
+--
+ALTER TABLE `servico`
+  ADD CONSTRAINT `fk-cliente` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idcliente`);
 
 --
 -- Limitadores para a tabela `servico_temp`

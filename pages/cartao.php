@@ -30,6 +30,7 @@
          $linhacli=$resultadocli->fetch(PDO::FETCH_ASSOC);
          extract($linhacli);
          $nomecli = $nome;
+         $_SESSION["idcliente"]=$idcliente;
        }
 
     $sqlfunc = "SELECT nome
