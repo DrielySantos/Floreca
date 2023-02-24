@@ -52,7 +52,7 @@
 
 
     <!-- JavaScript (Opcional) -->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
     <script src="./scripts/cep.js"></script>
     <!-- COOKIE ALERT -->
     <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
@@ -67,5 +67,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<style>
+      
+  .footer{
+    background: #dedede;
+  }
+
+  .footer> h4{
+      color: rgb(37, 33, 33);
+      margin-top: 25px;
+      
+  }
+
+  .footer p a{
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 20px;
+      color: rgb(14, 15, 15);
+  } 
+
+  .footer p a:hover {
+      padding-left: 30px;
+      border-left: 4px solid #c5c94c;
+      color: #797036;
+      transition: .4s;
+  }
+</style>
   </body>
 </html>

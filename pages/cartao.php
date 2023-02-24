@@ -9,8 +9,6 @@
 
     echo $_SESSION["quant"];   
 
-    
-
     $cesta = filter_input_array(INPUT_POST, FILTER_DEFAULT);
     var_dump($cesta);
 

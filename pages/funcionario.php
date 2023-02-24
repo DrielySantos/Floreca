@@ -31,12 +31,12 @@
           </div>
         </div>
 
-        <div class="col-md-3">        
+        <!-- <div class="col-md-3">        
           <div class="form-group">            
             <label for="dn">Data de Nascimento</label>
             <input type="date" class="form-control" name="dn">
           </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="row">

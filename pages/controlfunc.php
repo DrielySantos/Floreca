@@ -66,12 +66,12 @@
         // $senha = password_hash($dadoscad['senha'], PASSWORD_DEFAULT);
           
 
-       $sql =" INSERT into funcionario(nome,datanascimento,telefone,cpffuncionario,rg,cep,numerocasa,foto,email)
-               values(:nome,:datanascimento,:telefone,:cpffuncionario,:rg,:cep,:numerocasa,:foto,:email)";
+       $sql =" INSERT into funcionario(nome,telefone,cpffuncionario,rg,cep,numerocasa,foto,email)
+               values(:nome,:telefone,:cpffuncionario,:rg,:cep,:numerocasa,:foto,:email)";
 
       $salvar= $conn->prepare($sql);
       $salvar->bindParam(':nome', $dadoscad['nome'], PDO::PARAM_STR);
-      $salvar->bindParam(':datanascimento', $dadoscad['dn'], PDO::PARAM_STR);
+    //   $salvar->bindParam(':datanascimento', $dadoscad['dn'], PDO::PARAM_STR);
       $salvar->bindParam(':telefone', $dadoscad['telefone'], PDO::PARAM_STR);
       $salvar->bindParam(':cpffuncionario', $dadoscad['cpf'], PDO::PARAM_STR);
       $salvar->bindParam(':rg', $dadoscad['rg'], PDO::PARAM_STR);
@@ -115,16 +115,17 @@
             
         }
 
-        $sql ="UPDATE aluno 
-               set nome=:nome,datanascimento=:datanascimento,telefone=:telefone,cpf=:cpf,
+        $sql ="UPDATE funcionario 
+               set nome=:nome,telefone=:telefone,cpffuncionario=:cpffuncionario,
                    rg=:rg,cep=:cep,numerocasa=:numerocasa,foto=:foto,email=:email 
                WHERE idfuncionario=:idfuncionario";
+            //    datanascimento=:datanascimento
 
         $salvar= $conn->prepare($sql);
         $salvar->bindParam(':nome', $dadoscad['nome'], PDO::PARAM_STR);
-        $salvar->bindParam(':datanascimento', $dadoscad['dn'], PDO::PARAM_STR);
+        // $salvar->bindParam(':datanascimento', $dadoscad['dn'], PDO::PARAM_STR);
         $salvar->bindParam(':telefone', $dadoscad['telefone'], PDO::PARAM_STR);
-        $salvar->bindParam(':cpf', $dadoscad['cpf'], PDO::PARAM_STR);
+        $salvar->bindParam(':cpffuncionario', $dadoscad['cpf'], PDO::PARAM_STR);
         $salvar->bindParam(':rg', $dadoscad['rg'], PDO::PARAM_STR);
         $salvar->bindParam(':cep', $dadoscad['cep'], PDO::PARAM_STR);
         $salvar->bindParam(':numerocasa', $dadoscad['numero'], PDO::PARAM_INT);
@@ -137,7 +138,7 @@
 
         echo "<script>
         alert('Os dados foram atualizados!');
-        parent.location = 'funcionario.php';
+        parent.location = './funcionario.php';
         </script>";
         
         unset($dadoscad);
@@ -145,7 +146,7 @@
     
         echo "<script>
        alert('Os dados não foram atualizados!');
-       parent.location = 'funcionario.php';
+       parent.location = './funcionario.php';
        </script>";
         
     }

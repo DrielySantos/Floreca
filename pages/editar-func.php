@@ -29,7 +29,7 @@
     }
 ?>
 
-<form method="POST" action="controlfunc.php" enctype="multipart/form-data">
+<form method="POST" action="./controlfunc.php" enctype="multipart/form-data">
     <div class="container">
         <div class="row">
                 <div class="col-md-12 text-center">
@@ -65,14 +65,14 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
               <div class="form-group">
                   <label for="dn">Data de Nascimento</label>
                   <input type="date" class="form-control" name="dn"
                   value="<?php echo $datanascimento;?>"
                     >
               </div>
-           </div>
+           </div> -->
         </div>
 
         <div class="row">

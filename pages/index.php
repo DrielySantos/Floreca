@@ -1,6 +1,6 @@
 <?php
-    require_once 'head.php';
-    require_once 'menu.php';
+    require_once './head.php';
+    require_once './menu.php';
 
 ?>
 
@@ -52,21 +52,25 @@
           <div class="col-sm-5" style="vertical-align:top">
             <img src="./imagens/peeling-2.png"   class="list__img" style="width: 100px;height:100px" alt="">
             <h3 class="list__title" >Alta tecnologia Floreça por um valor fixo</h3>
-              <p class="text-md-left">No Floreça, nós planejamos seu protocolo de forma personalizada! Ao se tornar membro do Floreça, você pode realizar outros tratamentos, além das suas sessões mensais, por valores especiais de acordo com o seu plano.</p>
+              <p class="text-md-left">No Floreça, nós planejamos seu atendimento de forma personalizada! Ao se tornar membro do Floreça, você pode realizar outros tratamentos, além das suas sessões mensais, por valores especiais de acordo com o seu plano.</p>
           </div>
     
           <div class="col-sm-5" style="vertical-align:top">
             <img src="./imagens/radiofrequencia-4.jpg" class="list__img" style="width: 100px;height:100px" alt="">
             <h3 class="list__title" >Equipamentos de última geração</h3>
-            <p class="text-md-left">O Floreça dispõe em suas clínicas, aparelhos com a mais alta tecnologia. Seguimos padrões internacionais de qualidade para levar o autocuidado de forma inteligente e segura para cada um de vocês!</p>
+            <p class="text-md-left">O Floreça dispõe em sua clínica, aparelhos com a mais alta tecnologia. Seguimos padrões internacionais de qualidade para levar o autocuidado de forma inteligente e segura para cada um de vocês!</p>
           </div>
         </div>
-       
-        <div class="row text-center">
-          <div class="col-md-12 ">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+<!-- /////////////////////////////////////////////////////////////////// -->
+
+      <div class="container-fluid first__content">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h5>Os mais queridinhos</h5>
+            <h3>Conheça mais em detalhes</h3>
           </div>
         </div>
+      </div>
 
         <div class="row justify-content-center">
           <div class="col-md-3 col-sm">
@@ -74,7 +78,7 @@
               <img class="card-img-top" src="./imagens/facial-2.jpg" alt="Imagem de capa do card">
               <div class="card-body">
                 <h5 class="card-title">Preenchimento Facial</h5>
-                <p class="card-text">Procedimento para embelezamento e reestruturação da pele envelhecida.</p>
+                <p class="card-text"> Tratamento e reestruturação da pele envelhecida.</p>
                 <a href="./facial.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
               </div>
             </div>
@@ -82,34 +86,37 @@
 
           <div class="col-md-3 col-sm">
             <div class="card">
-              <img class="card-img-top" src="./imagens/facial-2.jpg" alt="Imagem de capa do card">
+              <img class="card-img-top" src="./imagens/ultracav-1.jpg" alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Preenchimento Facial</h5>
-                <p class="card-text">Procedimento para embelezamento e reestruturação da pele envelhecida.</p>
-                <a href="./facial.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+                <h5 class="card-title">Ultracavitação</h5>
+                <p class="card-text"> Tratamento utilizado para eliminar a gordura localizada.</p>
+                <a href="./cavitacional.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
               </div>
             </div>
           </div>
 
           <div class="col-md-3 col-sm">
             <div class="card">
-              <img class="card-img-top" src="./imagens/facial-2.jpg" alt="Imagem de capa do card">
+              <img class="card-img-top" src="./imagens/peeling-3.jpg" alt="Imagem de capa do card">
               <div class="card-body">
-                <h5 class="card-title">Preenchimento Facial</h5>
-                <p class="card-text">Procedimento para embelezamento e reestruturação da pele envelhecida.</p>
-                <a href="./facial.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+                <h5 class="card-title">Peeling Corporal</h5>
+                <p class="card-text">O peeling é um procedimento com foco na esfoliação da pele.</p>
+                <a href="./peeling.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
+      <!-- **************************** -->
 
-
+      <div class="image__banner dark">
+        <img width="500" height="250" src="./imagens/banner.jpg" alt="">
       </div>
 
 <!-- *************** SEGUNDO CONTEÚDO ***************** -->
 
-      <div class="container-fluid pag-principal">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 text-center">
             <h5 class="listra">Aguma coisa aqui</h5>
@@ -227,11 +234,19 @@
     </form>
 
 
-<style>
 
-.carrossel img{
+<?php
+    require_once './footer.php';
+?>
+<style> 
+
+ .carrossel img{
     height:500px;
     width:100%;
+} 
+
+.first__content {
+  margin-top: 8rem;
 }
 
 .listra{
@@ -240,17 +255,17 @@
   margin: 0 auto;
   font-size: small;
   box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15), -5px -5px 30px 15px rgba(0,0,0,0.12);
+} 
+
+.list{
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  text-align: center;
 }
 
-  .list{
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    text-align: center;
-  }
-
  
-  .list__img{
+.list__img{
     position: relative;
     margin-right: 19px;
     float: left;
@@ -260,7 +275,7 @@
     border-radius: 50%;
     background-size: cover;
     background-position: 50%;
-  }  
+  } 
 
   .list__title{
     line-height:95%;
@@ -278,8 +293,24 @@
 
   .list__title{
     text-align: justify;
+  } */
+
+  .card{
+    width: 15rem;
+    height: 20rem;
   }
-</style>
+
+  .image__banner img {
+      width: 100%;
+    }
+
+  .image__banner img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  } 
+</style> 
 
 
 
@@ -287,6 +318,3 @@
 
 
 
-<?php
-    require_once './footer.php';
-?>

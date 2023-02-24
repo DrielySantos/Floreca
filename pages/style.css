@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Satisfy&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Satisfy&display=swap');
 
 
 /* ***************** CORPO DO SITE ***************** */
@@ -12,6 +12,53 @@ body{
     overflow-x: hidden;
     background: #dedede;
 }
+
+/* ******************* CARROSSEL ******************** */
+
+.carrossel img{
+    height:500px;
+    width:100%;
+}
+
+/* ******************* */
+
+.list{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.list__img{
+    position: relative;
+    margin-right: 19px;
+    float: left;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50%;
+}  
+
+  .list__title{
+    line-height:95%;
+    font-weight: 300;
+    font-size: 20px;
+}
+  
+  .list__title h3{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+  .list__title{
+    text-align: justify;
+}
+
 /********************* dropdown-item ********************/
 .dropdown-item:hover {
     padding-left: 30px;
@@ -22,6 +69,11 @@ body{
 /* *****************************************************/
 
 /****************** PRIMEIRO CONTEÚDO ******************/
+
+.first__content {
+    margin-top: 8rem;
+}
+
 .content__title{
     margin-top: 50px;
     font-family: 'Satisfy', cursive;
@@ -30,6 +82,7 @@ body{
 
 .card{
     width: 15rem;
+    height: 20rem;
     border-radius: 40px;
     margin: 20px 0;
     background-color: #ffffff;
@@ -60,7 +113,28 @@ body{
   height: 50%;
 }
 
+/* *********************** BANNER ******************* */
+
+.image__banner img {
+    width: 100%;
+}
+
+.image__banner img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
 /****************** SEGUNDO CONTEÚDO ******************/
+
+.listra{
+    color: #fff;
+    background-color: #000;
+    margin: 0 auto;
+    font-size: small;
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15), -5px -5px 30px 15px rgba(0,0,0,0.12);
+}
 
 .details{
     margin: 20px 0;
@@ -130,7 +204,7 @@ body{
 /* *********************AGENDA ***************** */
 
 .scheduling__form {
-    background: linear-gradient(#6c7097,#273285);
+    background: linear-gradient(#95976c,#857c27);
    
 }
 
@@ -221,14 +295,17 @@ body{
     height: 200px;
     border-radius: 40px 0 40px 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
 
+.list li {
+    text-align: left;
 }
 
 /********************* RODAPÉ **********************/
 
 .footer{
-    background:#d4d49b;
-    /* border-top: 1px solid rgb(3, 3, 3); */
+    background:#d4d4d0;
+    
 }
 
 .footer> h4{
@@ -246,67 +323,10 @@ body{
 
 .footer p a:hover {
     padding-left: 30px;
-    border-left: 4px solid #c74cc9;
-    color: #783679;
+    border-left: 4px solid #c5c94c;
+    color: #797036;
     transition: .4s;
 }
-
-/* .social__networks ul {
-    margin-right: 50px;
-    margin-top: 10px;
-    display:inline-flex;
-
-}
-
-.social__networks ul li {
-    margin: 1px;
-    list-style: none;
-}
-
-.social__networks ul li a {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    display:block;
-    text-align:center;
-    margin:0 10px;
-    border-radius: 50%;
-    padding: 6px;
-    box-sizing: border-box;
-    text-decoration:none;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-    background: linear-gradient(0deg, #ddd, #fff);
-    transition: .5s;
-}
-
-.social__networks ul li a:hover {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    text-decoration:none;
-}
-
-.social__networks ul li a .fab {
-    width: 100%;
-    height: 100%;
-    display:block;
-    background: linear-gradient(0deg, #fff, #ddd);
-    border-radius: 50%;
-    line-height: calc(50px - 12px);
-    font-size:20px;
-    color: #262626;
-    transition: .5s;
-}
-  
-.social__networks ul li:nth-child(1) a:hover .fab {
-    color: #3b5998;
-}
-
-.social__networks ul li:nth-child(2) a:hover .fab {
-    color: #e4405f;
-}
-
-.social__networks ul li:nth-child(4) a:hover .fab {
-    color: #25D366;
-} */
 
 
 
