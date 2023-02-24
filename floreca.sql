@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Fev-2023 às 01:56
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.6
+-- Tempo de geração: 24-Fev-2023 às 05:16
+-- Versão do servidor: 10.4.25-MariaDB
+-- versão do PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -94,7 +94,7 @@ INSERT INTO `endereco` (`cep`, `rua`, `bairro`, `cidade`, `uf`) VALUES
 --
 
 CREATE TABLE `funcionario` (
-  `idfuncionario` char(14) NOT NULL,
+  `idfuncionario` int(11) NOT NULL,
   `cpffuncionario` char(14) NOT NULL,
   `nome` varchar(60) NOT NULL,
   `telefone` varchar(15) NOT NULL,
@@ -110,9 +110,9 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`idfuncionario`, `cpffuncionario`, `nome`, `telefone`, `rg`, `cep`, `numerocasa`, `foto`, `email`) VALUES
-('1', '123', 'Mário Silva', '(21)9999-8888', '0001', '23085-610', 40, 'vazio', ''),
-('2', '456', 'Gabriel Silva', '(21)9999-7777', '0002', '26551-090', 100, 'vazio', ''),
-('3', '789', 'Mariana Souza', '(21)9999-5555', '1234', '23085-610', 1820, 'vazio', '');
+(1, '123', 'Mário Silva', '(21)9999-8888', '0001', '23085-610', 40, 'vazio', ''),
+(2, '456', 'Gabriel Silva', '(21)9999-7777', '0002', '26551-090', 100, 'vazio', ''),
+(3, '789', 'Mariana Souza', '(21)9999-5555', '1234', '23085-610', 1820, 'vazio', '');
 
 -- --------------------------------------------------------
 
@@ -124,12 +124,20 @@ CREATE TABLE `itemservico` (
   `iditem` int(11) NOT NULL,
   `idfuncionario` int(11) NOT NULL,
   `idservico` int(11) NOT NULL,
-  `idprodecimento` int(11) NOT NULL,
-  `data` date NOT NULL,
+  `idprocedimento` int(11) NOT NULL,
   `horario` varchar(30) NOT NULL,
   `valor` double NOT NULL,
   `categoria` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `itemservico`
+--
+
+INSERT INTO `itemservico` (`iditem`, `idfuncionario`, `idservico`, `idprocedimento`, `horario`, `valor`, `categoria`) VALUES
+(1, 2, 5, 1, '22:48', 500, 'facial'),
+(2, 2, 5, 2, '22:48', 350, 'corporal'),
+(3, 1, 6, 1, '08:15', 500, 'facial');
 
 -- --------------------------------------------------------
 
@@ -161,10 +169,21 @@ INSERT INTO `procedimento` (`idprocedimento`, `nomeprocedimento`, `descricao`, `
 CREATE TABLE `servico` (
   `idservico` int(11) NOT NULL,
   `data` date NOT NULL,
-  `horario` varchar(30) NOT NULL,
   `valor` double NOT NULL,
   `idcliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `servico`
+--
+
+INSERT INTO `servico` (`idservico`, `data`, `valor`, `idcliente`) VALUES
+(1, '2023-02-24', 850, 2),
+(2, '2023-02-24', 850, 2),
+(3, '2023-02-24', 850, 2),
+(4, '2023-02-24', 850, 2),
+(5, '2023-02-24', 850, 2),
+(6, '2023-02-24', 500, 1);
 
 -- --------------------------------------------------------
 
@@ -184,14 +203,6 @@ CREATE TABLE `servico_temp` (
   `nomecli` varchar(60) NOT NULL,
   `nomefunc` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `servico_temp`
---
-
-INSERT INTO `servico_temp` (`idcliente`, `idfuncionario`, `idprocedimento`, `data`, `horario`, `valor`, `nomeproced`, `categoria`, `nomecli`, `nomefunc`) VALUES
-(2, 2, 1, '2023-02-15', '22:48', 500, 'Preenchimento Facial', 'facial', 'Sue Costa', 'Gabriel Silva'),
-(2, 2, 2, '2023-02-15', '22:48', 350, 'Radiofrequência', 'corporal', 'Sue Costa', 'Gabriel Silva');
 
 --
 -- Índices para tabelas despejadas
@@ -215,7 +226,8 @@ ALTER TABLE `funcionario`
 ALTER TABLE `itemservico`
   ADD PRIMARY KEY (`iditem`),
   ADD KEY `fk_idservico` (`idservico`),
-  ADD KEY `fk_procedimento` (`idprodecimento`);
+  ADD KEY `fk_procedimento` (`idprocedimento`),
+  ADD KEY `fk_idfuncionario` (`idfuncionario`);
 
 --
 -- Índices para tabela `procedimento`
@@ -231,6 +243,12 @@ ALTER TABLE `servico`
   ADD KEY `fk-cliente` (`idcliente`);
 
 --
+-- Índices para tabela `servico_temp`
+--
+ALTER TABLE `servico_temp`
+  ADD KEY `fk_idprocedimento` (`idprocedimento`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -244,7 +262,13 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de tabela `itemservico`
 --
 ALTER TABLE `itemservico`
-  MODIFY `iditem` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iditem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `servico`
+--
+ALTER TABLE `servico`
+  MODIFY `idservico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restrições para despejos de tabelas
@@ -254,8 +278,9 @@ ALTER TABLE `itemservico`
 -- Limitadores para a tabela `itemservico`
 --
 ALTER TABLE `itemservico`
-  ADD CONSTRAINT `fk_idservico` FOREIGN KEY (`idservico`) REFERENCES `servico` (`idservico`),
-  ADD CONSTRAINT `fk_procedimento` FOREIGN KEY (`idprodecimento`) REFERENCES `procedimento` (`idprocedimento`);
+  ADD CONSTRAINT `fk_idfuncionario` FOREIGN KEY (`idfuncionario`) REFERENCES `funcionario` (`idfuncionario`),
+  ADD CONSTRAINT `fk_procedimento` FOREIGN KEY (`idprocedimento`) REFERENCES `procedimento` (`idprocedimento`),
+  ADD CONSTRAINT `fk_servico` FOREIGN KEY (`idservico`) REFERENCES `servico` (`idservico`);
 
 --
 -- Limitadores para a tabela `servico`
