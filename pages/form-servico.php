@@ -146,18 +146,9 @@
             </div>
         </div>
         
-        <div class="row save__service">
-            <div class="col-md-12 text-center">
-                <input type="submit" class="btn btn-primary" name="" value="Salvar serviço">
-            </div>
-        </div>
 </form>
 
-<style>
-    .save__service{
-        margin-top: 10px;
-    }
-</style>
+
 <?php
     require_once './footer-admin.php';
 ?>

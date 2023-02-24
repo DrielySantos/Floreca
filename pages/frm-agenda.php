@@ -16,7 +16,6 @@
         <table class="table">
             <thead>
                 <tr>
-                    <!-- <th scope="col">Imagem</th> -->
                     <th scope="col">Cliente</th>
                     <th scope="col">Funcionário</th>
                     <th scope="col">Procedimento</th>
@@ -24,7 +23,8 @@
                     <th scope="col">Data</th>
                     <th scope="col">Horario</th>
                     <th scope="col">Preço</th>
-                       
+                    <th scope="col">Operação</th>
+                  
                 </tr>
             </thead>
         <tbody>
@@ -43,10 +43,13 @@
           <td><?php echo $categoria ?></td>
           <td><?php echo $data ?></td>
           <td><?php echo $horario ?></td>
-          <td><?php echo $valor ?></td>
+          <td><?php echo $valor;
+          
+          $totalservice += $valor?></td>
           <td>
           
-                <a href="./finaliza-serv.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $idcliente; ?>">Excluir</button></a>
+           
+            <a href="./excluir.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $idcliente; ?>">Excluir</button></a>
             </td>
         </tr>        
          
@@ -55,14 +58,15 @@
     } 
 ?>
 
-    <tr><td><?php echo "Total do serviço - R$".$valor; ?></td></tr>
+    <tr><td><?php echo "Total do serviço - R$".$totalservice; ?></td></tr>
 
         </tbody>
     </table>
 
-    <?php $_SESSION["totalcompra"]=$totalcompra; ?>
+    <?php $_SESSION["totalservice"]=$totalservice;
+    $_SESSION["idcliente"]=$idcliente; ?>
 
-    <input type="submit" class="btn btn-sucess" name="finalizar" value="Finalizar serviço">
+     <input type="submit" class="btn btn-sucess" name="finalizar" value="Finalizar serviço">
  </form>
 
 <?php

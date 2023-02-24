@@ -25,7 +25,8 @@
             //acessar pagamento;
             $data = date('y-m-d');
             $valor = $_SESSION['totalcompra'];            
-            $matricula = $_SESSION["matricula"];
+            
+            
           
             $sqlvenda = "INSERT into venda(data,valor,matricula)values
             (:data,:valor,:matricula)";
