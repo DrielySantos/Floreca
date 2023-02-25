@@ -7,9 +7,9 @@
 
     if(isset($_POST["excluir"])) {
 
-        $servico_item = $_POST["excluir"];
+        $idprocedimento = $_POST["excluir"];
 
-        $sqlexcluir = "DELETE from cartao
+        $sqlexcluir = "DELETE from servico_temp
                        where idprocedimento = $idprocedimento";
         $resulexcluir=$conn->prepare($sqlexcluir);
         $resulexcluir->execute();
