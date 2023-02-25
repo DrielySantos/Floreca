@@ -18,7 +18,7 @@
 
 ?>
 
-<form method="POST" action="cartao.php" enctype="multipart/form-data">
+<form method="POST" action="cartao.php" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <div class="container">
         <div class="row">
                 <div class="col-md-12 text-center">
@@ -132,17 +132,12 @@
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label for="valor">Valor Total</label>
-                    <input type="text" name="valor" class="form-control" onchange="this.value = this.value.replace( /,/g, '.')">
-                </div>
-            </div>
         </div>
 
         <div class="row">
             <div class="col-md-12 text-center">
-                <input type="submit" class="btn btn-primary" name="btncad" value="Ok">
+                <input type="submit" class="btn btn-primary" name="btncad" value="Salvar">
+                
             </div>
         </div>
         

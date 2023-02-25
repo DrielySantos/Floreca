@@ -109,6 +109,13 @@
       </div>
     </div>
   </div>
+
+    <div class="col-md-5">
+      <div class="form-group">
+        <label for="foto">Foto</label><p>
+        <input type="file" class="form-control" name="foto">
+      </div>
+    </div>
   
   <div class="row">    
     <div class="col-md-12 text-center">

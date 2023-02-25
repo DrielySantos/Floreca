@@ -7,7 +7,7 @@
     $pagatual = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
 	$pag = (!empty($pagatual)) ? $pagatual : 1;
 
-    $limitereg = 3;
+    $limitereg = 4;
 
     $inicio = ($limitereg * $pag) - $limitereg;
 
@@ -15,7 +15,6 @@
     $busca= "SELECT idcliente, cpf, nome, telefone, email 
               from cliente
               LIMIT $inicio , $limitereg";
-            //   WHERE status = 'C'
 
     $resultado = $conn->prepare($busca);
     $resultado->execute();
@@ -48,10 +47,6 @@
           <td><?php echo $nome ?></td>
           <td><?php echo $telefone ?></td>
           <td><?php echo $email ?></td>
-          <td>
-            <?php echo "<a href='historico.php?idcliente=$idcliente'>" ; ?>
-            <input type="submit" class="btn btn-primary" name="historico" value="Histórico">
-          </td>
           <td>
             <?php echo "<a href='editar-client.php?idcliente=$idcliente'>" ; ?>
             <input type="submit" class="btn btn-danger" name="editar" value="Editar">

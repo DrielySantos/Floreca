@@ -12,7 +12,7 @@
     $cesta = filter_input_array(INPUT_POST, FILTER_DEFAULT);
     var_dump($cesta);
 
-     $idprocedimento = $cesta["procedimento"];//buscar procedimento
+     $idprocedimento = $cesta["procedimento"];
      $idcliente = $cesta["cliente"];
      $idfuncionario = $cesta["funcionario"];
      $data = $cesta["date"];
@@ -48,7 +48,7 @@
     
             $sql = "SELECT idprocedimento, nomeprocedimento, descricao, valor
             FROM procedimento
-            WHERE idprocedimento = $idprocedimento LIMIT 1";   //procedimento
+            WHERE idprocedimento = $idprocedimento LIMIT 1";
         
             $resultado= $conn->prepare($sql);
             $resultado->execute();
@@ -78,6 +78,8 @@
 
         }
 
+        $pag = $_SERVER['HTTP_REFERER'] ;
+        header("Location:$pag");
 
 
 

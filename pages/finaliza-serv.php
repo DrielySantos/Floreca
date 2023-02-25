@@ -1,19 +1,20 @@
 <?php
+
+    require_once './conexao.php';
     session_start();
     ob_start();
 
-    require_once './conexao.php';
-
-
+    
     if(isset($_POST["excluir"])) {
 
-        $servico_item = $_POST["excluir"];
+        $idprocedimento = $_POST["excluir"];
 
-        $sqlexcluir = "DELETE from cartao
+        $sqlexcluir = "DELETE from servico_temp
                        where idprocedimento = $idprocedimento";
         $resulexcluir=$conn->prepare($sqlexcluir);
         $resulexcluir->execute();
         $_SESSION["quant"]-=1;
+        
 
     }
     
@@ -22,21 +23,15 @@
             
             // acessar pagamento;
             $data = date('y-m-d');
-            $valor = $_SESSION['totalservice']; //tá logada?
+            $valor = $_SESSION['totalservice']; 
             $idcliente = $_SESSION['idcliente'];
-
-            //variável horário vc não criou ainda
-            //$horario = ??????
-
 
             
             $sqlvenda = "INSERT into servico(data,valor,idcliente) values (:data,:valor,:idcliente)";
             $salvarvenda= $conn->prepare($sqlvenda);
-            // $salvarvenda->bindParam(':idservico', $idservico, PDO::PARAM_STR);
             $salvarvenda->bindParam(':data', $data, PDO::PARAM_STR);           
             $salvarvenda->bindParam(':valor', $valor, PDO::PARAM_STR);
             $salvarvenda->bindParam(':idcliente', $idcliente, PDO::PARAM_STR);
-            // $salvarvenda->bindParam(':idfuncionario', $idfuncionario, PDO::PARAM_STR);
             $salvarvenda->execute();
 
             $venda = "Select LAST_INSERT_ID()";
@@ -72,7 +67,7 @@
           $limpa= $conn->prepare($sqllimpa);
             $limpa->execute();
            $_SESSION["quant"] = 0;
-           header("Location:./index.php");
+           header("Location:./menuadmin.php");
         }
 
         

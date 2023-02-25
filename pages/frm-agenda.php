@@ -1,9 +1,9 @@
 <?php
     require_once './head.php';
-    require './menu.php';
+    require './menuadmin.php';
     include_once './conexao.php';
-    session_start();
-    ob_start();
+    // session_start();
+    // ob_start();
 
     $totalservice = 0;
     $sql = "SELECT * from servico_temp";
@@ -51,7 +51,7 @@
           <td>
           
            
-            <a href="./excluir.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $idcliente; ?>">Excluir</button></a>
+            <a href="./finaliza-serv.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $idprocedimento;?>">Cancelar</button></a>
             </td>
         </tr>        
          
@@ -75,5 +75,3 @@
     }
     require_once './footer-admin.php';
 ?>
-
-<!-- compra -->

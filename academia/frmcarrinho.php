@@ -58,9 +58,13 @@ if(($resultado)and($resultado->RowCount()!=0)){
 
 <?php $_SESSION["totalcompra"]=$totalcompra; 
  
-<input type="submit" class="btn btn-primary" value="Finalizar Compra">
-<a href="index.php"><button type="button" class="btn btn-primary">Continuar Comprando</button></a>
+  <input type="submit" class="btn btn-primary" value="Finalizar Compra">
+    <a href="index.php"><button type="button" class="btn btn-primary" >Continuar Comprando</button>
+  </a>
+
 </form>
+?>
+
 <?php
 }
 ?>

@@ -7,8 +7,8 @@
     $id = filter_input(INPUT_GET, "idcliente", FILTER_SANITIZE_NUMBER_INT);
 
     if (empty($id)) {
-        $_SESSION['msg'] = "Erro: Aluno não encontrado!";
-        header("Location: relalunos.php");
+        $_SESSION['msg'] = "Erro: Cliente não encontrado!";
+        header("Location: ./finaliza-serv.php");
         exit();
     }
 
@@ -27,14 +27,14 @@
 
   if(($resultado) AND ($resultado->rowCount() != 0)){
     echo "<script>
-    alert('Aluno excluido com sucesso!');
-    parent.location = 'relalunos.php';
+    alert('Procedimento cancelado com sucesso!');
+    parent.location = './finaliza-serv.php';
     </script>";
 
   }else{
     echo "<script>
-    alert('Exclusão não realizada!');
-    parent.location = 'relalunos.php';
+    alert('Cancelamento não realizado!');
+    parent.location = './finaliza-serv.php';
     </script>";
   }
 
