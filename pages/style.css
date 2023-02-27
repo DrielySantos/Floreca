@@ -128,14 +128,6 @@ body{
 
 /****************** SEGUNDO CONTEÚDO ******************/
 
-.listra{
-    color: #fff;
-    background-color: #000;
-    margin: 0 auto;
-    font-size: small;
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15), -5px -5px 30px 15px rgba(0,0,0,0.12);
-}
-
 .details{
     margin: 20px 0;
     background-color: #ffffff;
@@ -197,6 +189,10 @@ body{
 .details img{
     width: 100%;
     height: 50%;
+}
+
+.tittle__second__content{
+    margin-top: 25px;
 }
 
 /***************************************************/
@@ -301,6 +297,11 @@ body{
     text-align: left;
 }
 
+/********************* PÁGINA SOBRE *****************/
+
+.about__text{
+    margin-top: 30px;
+}
 /********************* RODAPÉ **********************/
 
 .footer{

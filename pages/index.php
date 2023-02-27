@@ -119,7 +119,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h5 class="listra">Aguma coisa aqui</h5>
+            <h5 class="tittle__second__content">Aguma coisa aqui</h5>
             <h3>Nossos Tratamentos</h3>
           </div>
         </div>
@@ -127,46 +127,50 @@
 
       <div class="container">
         <div class="row carousel">
-            <div class="col-md-3">
-                <div class="details">
-                    <img src="./imagens/dog.webp" alt="imagem de um cachorrinho">
-                    <h2>Remoção de tatuagem</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorem repellat libero molestiae ab laudantium cupiditate voluptates dicta consequuntur. Perferendis quis omnis libero nemo mollitia. Recusandae quia cumque quisquam cupiditate!</p>
-                    <a href="https://">Fale Conosco</a>
-                    <a href="http://">Saiba +</a>
+          <div class="col-md-3 col-sm">
+            <div class="card">
+              <img class="card-img-top" src="./imagens/tatu-1.jpg" alt="demonstração de remoção de tatuagem">
+                <div class="card-body">
+                  <h5 class="card-title">Remoção Tatuagem</h5>
+                  <p class="card-text">Tratamento para remoção de tatuagem indesejada. </p>
+                  <a href="./tatuagem.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
                 </div>
-            </div>
+              </div>
+          </div>
 
-            <div class="col-md-3">
-                <div class="details">
-                    <img src="./imagens/dog.webp" alt="imagem de um cachorrinho">
-                    <h2>Drenagem linfática</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorem repellat libero molestiae ab laudantium cupiditate voluptates dicta consequuntur. Perferendis quis omnis libero nemo mollitia. Recusandae quia cumque quisquam cupiditate!</p>
-                    <a href="https://">Fale Conosco</a>
-                    <a href="http://">Saiba +</a>
-                </div>
+          <div class="col-md-3 col-sm">
+            <div class="card">
+              <img class="card-img-top" src="./imagens/laser-1.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">Depilação a Laser</h5>
+                <p class="card-text">Eliminação dos pelos através de disparos de laser. </p>
+                <a href="./laser.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+              </div>
             </div>
+          </div>
 
-            <div class="col-md-3">
-                <div class="details">
-                    <img src="./imagens/dog.webp" alt="imagem de um cachorrinho">
-                    <h2>Depilação a laser</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorem repellat libero molestiae ab laudantium cupiditate voluptates dicta consequuntur. Perferendis quis omnis libero nemo mollitia. Recusandae quia cumque quisquam cupiditate!</p>
-                    <a href="https://">Fale Conosco</a>
-                    <a href="http://">Saiba +</a>
-                </div>
+          <div class="col-md-3 col-sm">
+            <div class="card">
+              <img class="card-img-top" src="./imagens/biche-1.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">Bichectomia</h5>
+                <p class="card-text"> Tratamento utilizado para eliminar a gordura localizada.</p>
+                <a href="./bichec.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+              </div>
             </div>
+          </div>
 
-            <div class="col-md-3">
-                <div class="details">
-                    <img src="./imagens/dog.webp" alt="imagem de um cachorrinho">
-                    <h2>Botox</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorem repellat libero molestiae ab laudantium cupiditate voluptates dicta consequuntur. Perferendis quis omnis libero nemo mollitia. Recusandae quia cumque quisquam cupiditate!</p>
-                    <a href="https://">Fale Conosco</a>
-                    <a href="http://">Saiba +</a>
-                </div>
+          <div class="col-md-3 col-sm">
+            <div class="card">
+              <img class="card-img-top" src="./imagens/tecar-1.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">Tecarterapia</h5>
+                <p class="card-text"> Tratamento utilizado para eliminar a gordura localizada.</p>
+                <a href="./tecar.php.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+              </div>
             </div>
-
+          </div>
+          
         </div>
       </div>
 
@@ -246,16 +250,8 @@
 } 
 
 .first__content {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
-
-.listra{
-  color: #fff;
-  background-color: #000;
-  margin: 0 auto;
-  font-size: small;
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.15), -5px -5px 30px 15px rgba(0,0,0,0.12);
-} 
 
 .list{
   display: flex;
@@ -264,7 +260,6 @@
   text-align: center;
 }
 
- 
 .list__img{
     position: relative;
     margin-right: 19px;
@@ -298,6 +293,7 @@
   .card{
     width: 15rem;
     height: 20rem;
+
   }
 
   .image__banner img {
@@ -310,6 +306,10 @@
     max-width: 100%;
     vertical-align: middle;
   } 
+
+  .tittle__second__content{
+    margin-top: 30px;
+}
 </style> 
 
 

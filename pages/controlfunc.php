@@ -47,7 +47,7 @@
 
             echo "<script>
             alert('Preencher todos os campos!');
-            parent.location = 'funcionario.php';
+            parent.location = './funcionario.php';
             </script>";
             
 
@@ -56,7 +56,7 @@
 
             echo "<script>
             alert('Informe um e-mail válido!!');
-            parent.location = 'funcionario.php';
+            parent.location = './funcionario.php';
             </script>";
             
         }
@@ -71,7 +71,6 @@
 
       $salvar= $conn->prepare($sql);
       $salvar->bindParam(':nome', $dadoscad['nome'], PDO::PARAM_STR);
-    //   $salvar->bindParam(':datanascimento', $dadoscad['dn'], PDO::PARAM_STR);
       $salvar->bindParam(':telefone', $dadoscad['telefone'], PDO::PARAM_STR);
       $salvar->bindParam(':cpffuncionario', $dadoscad['cpf'], PDO::PARAM_STR);
       $salvar->bindParam(':rg', $dadoscad['rg'], PDO::PARAM_STR);
@@ -85,7 +84,7 @@
 
         echo "<script>
         alert('Funcionário cadastrado com sucesso!');
-        parent.location = 'funcionario.php';
+        parent.location = './funcionario.php';
         </script>";
         
         unset($dadoscad);
@@ -93,7 +92,7 @@
     
         echo "<script>
        alert('Funcionário não cadastrado!');
-       parent.location = 'funcionario.php';
+       parent.location = './funcionario.php';
        </script>";
         
       }
@@ -119,11 +118,9 @@
                set nome=:nome,telefone=:telefone,cpffuncionario=:cpffuncionario,
                    rg=:rg,cep=:cep,numerocasa=:numerocasa,foto=:foto,email=:email 
                WHERE idfuncionario=:idfuncionario";
-            //    datanascimento=:datanascimento
 
         $salvar= $conn->prepare($sql);
         $salvar->bindParam(':nome', $dadoscad['nome'], PDO::PARAM_STR);
-        // $salvar->bindParam(':datanascimento', $dadoscad['dn'], PDO::PARAM_STR);
         $salvar->bindParam(':telefone', $dadoscad['telefone'], PDO::PARAM_STR);
         $salvar->bindParam(':cpffuncionario', $dadoscad['cpf'], PDO::PARAM_STR);
         $salvar->bindParam(':rg', $dadoscad['rg'], PDO::PARAM_STR);

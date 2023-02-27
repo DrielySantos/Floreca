@@ -4,10 +4,10 @@
         <div class="row text-center">
           <div class="col-md-3 footer">
             <h4> Mapa do site</h4>
-              <p><a href="#">Home</a></p>
-              <p><a href="#">Tratamentos</a></p>
-              <p><a href="#">Nossa clínica</a></p>
-              <p><a href="#">Agendamento</a></p>
+              <p><a href="./index.php">Home</a></p>
+              <p><a href="./menu.php">Tratamentos</a></p>
+              <p><a href="./about.php">Nossa clínica</a></p>
+              <p><a href="./policies.php">Política de Privacidade</a></p>
           </div>
 
           <div class="col-md-3 footer">

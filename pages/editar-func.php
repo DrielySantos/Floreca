@@ -65,17 +65,6 @@
                 </div>
             </div>
 
-            <!-- <div class="col-md-3">
-              <div class="form-group">
-                  <label for="dn">Data de Nascimento</label>
-                  <input type="date" class="form-control" name="dn"
-                  value="<?php echo $datanascimento;?>"
-                    >
-              </div>
-           </div> -->
-        </div>
-
-        <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
                     <label for="cpffuncionario">CPF</label>
@@ -84,6 +73,10 @@
                     >
                 </div>
             </div>
+        </div>
+
+        <div class="row">
+            
 
             <div class="col-md-3">
                 <div class="form-group">
@@ -102,9 +95,7 @@
                     >
                 </div>
             </div>
-        </div>
 
-        <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
                     <label for="cep">CEP</label>
@@ -113,7 +104,9 @@
                     >
                 </div>
             </div>
+        </div>
 
+        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="endereco">Endereço</label>
@@ -155,7 +148,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-12 text-center">
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Enviar" name="btneditar">
                 </div>

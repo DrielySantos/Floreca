@@ -49,16 +49,9 @@
         </div>
         <div class="col-md-6 col-sm">
             <h4 class="standard__title">Quais são as regiões que podem receber preenchimento?</h4>
-                <p class="standard__text">O preenchimento, por ser um procedimento seguro e com resultados satisfatórios, pode ser feito em várias regiões da face, são elas:</p>
-                <ul class="list">
-                  <li>Abaixo dos olhos – olheiras;</li>
-                  <li>Ao redor dos lábios – Bigode chinês e Linha de marionete;</li>
-                  <li>Laterais da face – Têmporas.</li>
-                  <li>Lábios;</li>
-                  <li>Mandíbula;</li>
-                  <li>Queixo – Mento;</li>
-                  <li>Maçãs do rosto;</li>
-                </ul>
+                <p class="standard__text">O preenchimento, por ser um procedimento seguro e com resultados satisfatórios, pode ser feito em várias regiões da face, são elas, abaixo dos olhos (olheiras), ao redor dos lábios (Bigode chinês) e linha de marionete, nas laterais da face (Têmporas), lábios, mandíbula, queixo (Mento) e maçãs do rosto.
+                </p>
+               
         </div>
       </div>
     </div>
