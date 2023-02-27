@@ -14,7 +14,7 @@
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-md-6 col-sm">
-          <img src="./imagens/" class="img-fluid standard__photo" alt="">
+          <img src="./imagens/tatu-1.jpg" class="img-fluid standard__photo" alt="demonstração de remoção de tatuagem">
         </div>
         <div class="col-md-6 col-sm">
           <h4 class="standard__title">Em quanto tempo é possível remover todo o desenho?</h4>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="col-md-6 col-sm">
-          <img src="./imagens/" class="img-fluid standard__photo" alt="">
+          <img src="./imagens/tatu-2.jpg" class="img-fluid standard__photo" alt="demonstração de remoção de tatuagem">
           <h4 class="standard__title"></h4>
             <p class="standard__text">Além disso, as unhas removem a camada mais superficial da pele, o que é ruim para a cicatrização e gera uma agressão desnecessária nesse local que já está sensibilizado.
             A compressa fria deve ser colocada diretamente sobre a pele. Mas nunca coloque gelo em cubo diretamente sobre a pele.
@@ -50,7 +50,7 @@
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-md-6 col-sm">
-          <img src="./imagens/" class="img-fluid standard__photo" alt="">
+          <img src="./imagens/tatu-3.jpg" class="img-fluid standard__photo" alt="demonstração de remoção de tatuagem">
         </div>
         <div class="col-md-6 col-sm">
             <h4 class="standard__title">Sempre respeite o tempo de cicatrização</h4>

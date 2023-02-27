@@ -1,9 +1,10 @@
 <?php
 
     require_once './head.php';
+    require_once './menuadmin.php';
     include_once './conexao.php';
-    session_start();
-    ob_start();
+    // session_start();
+    // ob_start();
     
     
 

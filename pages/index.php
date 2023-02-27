@@ -155,7 +155,7 @@
               <div class="card-body">
                 <h5 class="card-title">Bichectomia</h5>
                 <p class="card-text"> Tratamento utilizado para eliminar a gordura localizada.</p>
-                <a href="./bichec.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+                <a href="./bichectomia.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@
               <div class="card-body">
                 <h5 class="card-title">Tecarterapia</h5>
                 <p class="card-text"> Tratamento utilizado para eliminar a gordura localizada.</p>
-                <a href="./tecar.php.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
+                <a href="./tecarterapia.php" target="_blank" class="btn btn-primary">Clique e saiba mais</a>
               </div>
             </div>
           </div>
