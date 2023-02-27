@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Fev-2023 às 00:36
--- Versão do servidor: 10.4.25-MariaDB
--- versão do PHP: 8.1.10
+-- Tempo de geração: 27-Fev-2023 às 18:24
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -112,22 +112,23 @@ CREATE TABLE `funcionario` (
   `cep` char(9) NOT NULL,
   `numerocasa` smallint(6) NOT NULL,
   `foto` varchar(255) DEFAULT NULL,
-  `email` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `funcionario`
 --
 
-INSERT INTO `funcionario` (`idfuncionario`, `cpffuncionario`, `nome`, `telefone`, `rg`, `cep`, `numerocasa`, `foto`, `email`) VALUES
-(1, '10112412014', 'Mário Silva', '(21)9999-8888', '0001', '23085-610', 40, NULL, 'mariosilva@outlook.com'),
-(2, '14520135478', 'Gabriel Silva', '(21)9999-7777', '0002', '26551-090', 100, NULL, 'silva@gmail.com'),
-(3, '', 'Nelly Vasquez', '21985746520', '15425798', '21512110', 81, NULL, 'nelly@outlook.com'),
-(4, '12015612444', 'Diná Costa', '21977776666', '15425793', '23036060', 900, NULL, 'dina@gmail.com'),
-(6, '14715412487', 'Sérgio Ramos', '21933334444', '15425789', '23036060', 120, 'fotos/63fa0f3be7f4a.jpg', 'serginho@gmail.com'),
-(7, '14715412478', 'Ana Carol', '2155553333', '15425794', '21512170', 73, 'fotos/63fa2f9582de8.jpg', 'ana@gmail.com'),
-(8, '10112412011', 'Sarah Costa', '2133335558', '98765412', '21510170', 210, NULL, 'sarah@outlook.com'),
-(9, '11122255540', 'Cristiana M.', '21985746544', '15963478', '21512110', 210, 'fotos/63fbe9955c06a.jpg', 'cris@outlook.com');
+INSERT INTO `funcionario` (`idfuncionario`, `cpffuncionario`, `nome`, `telefone`, `rg`, `cep`, `numerocasa`, `foto`, `email`, `senha`) VALUES
+(1, '10112412014', 'Mário Silva', '(21)9999-8888', '0001', '23085-610', 40, NULL, 'mariosilva@outlook.com', '$2y$10$YXgVmZorgYGBxJwQ9trnxu4bGyeqoxe2TdNamE8oN5Y56mTc.j.8a'),
+(2, '14520135478', 'Gabriel Silva', '(21)9999-7777', '0002', '26551-090', 100, NULL, 'silva@gmail.com', ''),
+(3, '', 'Nelly Vasquez', '21985746520', '15425798', '21512110', 81, NULL, 'nelly@outlook.com', ''),
+(4, '12015612444', 'Diná Costa', '21977776666', '15425793', '23036060', 900, NULL, 'dina@gmail.com', ''),
+(6, '14715412487', 'Sérgio Ramos', '21933334444', '15425789', '23036060', 120, 'fotos/63fa0f3be7f4a.jpg', 'serginho@gmail.com', ''),
+(7, '14715412478', 'Ana Carol', '2155553333', '15425794', '21512170', 73, 'fotos/63fa2f9582de8.jpg', 'ana@gmail.com', ''),
+(8, '10112412011', 'Sarah Costa', '2133335558', '98765412', '21510170', 210, NULL, 'sarah@outlook.com', ''),
+(9, '11122255540', 'Cristiana M.', '21985746544', '15963478', '21512110', 210, 'fotos/63fbe9955c06a.jpg', 'cris@outlook.com', '');
 
 -- --------------------------------------------------------
 
