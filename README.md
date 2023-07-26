@@ -25,11 +25,11 @@ Floreça é um site de estética que nasceu pelo desejo de uma das alunas esteti
 
 ## 📸 Captura de tela
 
-![](/pages/print-site/print-tela.png)
+![](novo/imagens/print-tela.png)
 
 <br>
 
-![](/pages/print-site/print-tela-2.png)
+![](/novo/imagens/print-tela-2.png)
 
 ## 🚀 Construído com
 - HTML e CSS
@@ -44,4 +44,4 @@ Floreça é um site de estética que nasceu pelo desejo de uma das alunas esteti
 
 ## Projeto em andamento
 
-![](/pages/imagens/manutencao.gif)
+![](/novo/imagens/manutencao.gif)
